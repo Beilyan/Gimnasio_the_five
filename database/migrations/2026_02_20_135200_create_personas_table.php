@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('apaterno');
             $table->string('amaterno')->nullable();
             $table->date('fnac');
+            $table->string('telefono', 25);
             $table->string('correo');
             $table->string('sexo');
             $table->timestamps();
