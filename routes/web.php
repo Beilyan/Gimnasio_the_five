@@ -38,3 +38,20 @@ Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])
 //cliente
 
 //empleado
+
+// LEONEL
+Route::get('/', function () {
+    return view('inicio');
+})->name('inicio');
+
+Route::get('/perfil', function () {
+    return view('perfil');
+})->name('perfil');
+
+Route::get('/entrenador', function () {
+    return view('entrenador');
+})->name('entrenador');
+
+Route::get('/tienda', function () {
+    return view('tienda');
+})->name('tienda');
