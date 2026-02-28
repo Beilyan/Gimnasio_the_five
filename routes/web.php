@@ -43,3 +43,20 @@ Route::post('/empleado/guardar', [EmpleadoController::class, 'guardar'])->name('
 Route::get('/empleado/lista', [EmpleadoController::class, 'mostrar'])->name('empleado.mostrar');
 Route::get('/empleado/editar/{id}', [EmpleadoController::class, 'editar'])->name('empleado.editar');
 Route::post('/empleado/actualizar', [EmpleadoController::class, 'actualizar'])->name('empleado.actualizar');
+
+// LEONEL
+Route::get('/', function () {
+    return view('inicio');
+})->name('inicio');
+
+Route::get('/perfil', function () {
+    return view('perfil');
+})->name('perfil');
+
+Route::get('/entrenador', function () {
+    return view('entrenador');
+})->name('entrenador');
+
+Route::get('/tienda', function () {
+    return view('tienda');
+})->name('tienda');
