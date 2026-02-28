@@ -11,7 +11,7 @@ class MembresiaController extends Controller
         $membresia = new Membresia();
         $membresia->nom_membresia = $req->nom_membresia;
         $membresia->descripcion = $req->descripcion;
-        $membresia->Precio = $req->Precio; 
+        $membresia->costo = $req->costo; 
         $membresia->duracion_meses = $req->duracion_meses;
 
         $membresia->save();
@@ -33,7 +33,7 @@ class MembresiaController extends Controller
         $membresia = Membresia::findOrFail($req->id);
         $membresia->nom_membresia = $req->nom_membresia;
         $membresia->descripcion = $req->descripcion;
-        $membresia->Precio = $req->Precio; 
+        $membresia->costo = $req->costo; 
         $membresia->duracion_meses = $req->duracion_meses;
 
         $membresia->save();
