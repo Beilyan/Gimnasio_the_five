@@ -38,6 +38,11 @@ Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])
 //cliente
 
 //empleado
+Route::get('/empleado/nueva', [EmpleadoController::class, 'nueva'])->name('empleado.nueva');
+Route::post('/empleado/guardar', [EmpleadoController::class, 'guardar'])->name('empleado.guardar');
+Route::get('/empleado/lista', [EmpleadoController::class, 'mostrar'])->name('empleado.mostrar');
+Route::get('/empleado/editar/{id}', [EmpleadoController::class, 'editar'])->name('empleado.editar');
+Route::post('/empleado/actualizar', [EmpleadoController::class, 'actualizar'])->name('empleado.actualizar');
 
 // LEONEL
 Route::get('/', function () {
