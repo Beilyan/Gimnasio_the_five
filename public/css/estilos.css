@@ -1,0 +1,149 @@
+/* INICIO DE BARRA DE NAVEGACION */
+.nav-container {
+    background: #1e1e1e;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.nav-item {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: white;
+}
+
+.nav-item.active i {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 12px;
+}
+/* FIN DE BARRA DE NAVEGACION */
+
+/* INICIO DE CARTA FLOTANTE */
+.card-flotante {
+    animation: flotar 3s ease-in-out infinite;
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+@keyframes flotar {
+    0% { 
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-color: transparent;
+    }
+
+    50% { 
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+        border-color: #000000; /* Azul Bootstrap */
+    }
+
+    100% { 
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-color: transparent;
+    }
+}
+/* FIN DE CARTA FLOTANTE */
+
+/* INICIO DE FOTOS */
+/* PORTADA */
+.profile-cover {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+}
+
+.cover-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+}
+
+.edit-cover {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        border-radius: 20px;
+}
+
+/* FOTO PERFIL */
+.profile-photo {
+        margin-top: -80px;
+        position: relative;
+}
+
+.profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 6px solid white;
+}
+
+.change-photo {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        border-radius: 50%;
+}
+/* FIN DE FOTOS */
+
+/* INICIO DEL TAMAÑO DEL ICONO */
+.icono-grande {
+    font-size: 60px;
+}
+/* FIN DEL TAMAÑO DEL ICONO */
+
+/* INICIO DE CARTAS SOMBREADAS DE ENTRENADOR */
+.contenedor-cards .card {
+    border: none; /* Quita línea negra */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra permanente */
+    transition: all 0.3s ease;
+}
+
+.contenedor-cards .card:hover {
+    transform: translateY(-8px); /* Se levantan */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+/* FIN DE CARTAS SOMBREADAS DE ENTRENADOR */
+
+/* INICIO DEL BOTON DE REGRESO EN ENTRENADOR */
+.profile-cover .bi-box-arrow-in-left {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 22px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.profile-cover .bi-box-arrow-in-left:hover {
+    background: black;
+}
+/* FIN DEL BOTON DE REGRESO EN ENTRENADOR */
+
+/* INICIO DE ADAPTACIÓN DE INFO EN ENTRENADOR */
+.profile-info {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+/* FIN DE ADAPTACIÓN DE INFO EN ENTRENADOR */
