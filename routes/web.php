@@ -7,10 +7,6 @@ use App\Http\Controllers\MembresiaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpleadoController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //persona
 Route::get('/persona/nueva', function () {
     return view('formulario_persona');
@@ -38,8 +34,14 @@ Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])
 //cliente
 
 //empleado
+Route::get('/empleado/nueva', [EmpleadoController::class, 'nueva'])->name('empleado.nueva');
+Route::post('/empleado/guardar', [EmpleadoController::class, 'guardar'])->name('empleado.guardar');
+Route::get('/empleado/lista', [EmpleadoController::class, 'mostrar'])->name('empleado.mostrar');
+Route::get('/empleado/editar/{id}', [EmpleadoController::class, 'editar'])->name('empleado.editar');
+Route::post('/empleado/actualizar', [EmpleadoController::class, 'actualizar'])->name('empleado.actualizar');
 
 // LEONEL
+// RUTAS DE BARRA DE NEVEGACIÓN
 Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
@@ -48,10 +50,31 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
 
-Route::get('/entrenador', function () {
-    return view('entrenador');
-})->name('entrenador');
+Route::get('/lista_entrenadores', function () {
+    return view('lista_entrenadores');
+})->name('lista_entrenadores');
 
 Route::get('/tienda', function () {
     return view('tienda');
 })->name('tienda');
+
+// RUTA DE ENTRENADORES
+Route::get('/entrenador', function () {
+    return view('entrenador');
+})->name('entrenador');
+
+// RUTA DE PRODUCTOS
+Route::get('/producto', function () {
+    return view('producto');
+})->name('producto');
+
+// RUTA DE TIPOS EJERCICIOS
+// PECHO
+Route::get('/pecho', function () {
+    return view('pecho');
+})->name('pecho');
+
+// RUTA DE EJERCICIOS
+Route::get('/pecho_1', function () {
+    return view('pecho_1');
+})->name('pecho_1');
