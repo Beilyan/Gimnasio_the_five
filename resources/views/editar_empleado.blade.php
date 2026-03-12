@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@
 
             <div>
                 <label class="block text-gray-600 mb-1">Código de empleado</label>
-                <input type="text" name="cod_empleado" value="{{$empleado->cod_empleado}}"
+                <input type="text" name="cod_empleado" value="{{$empleado->cod_empleado}} readonly"
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
@@ -67,3 +69,4 @@
 </body>
 
 </html>
+@endsection 

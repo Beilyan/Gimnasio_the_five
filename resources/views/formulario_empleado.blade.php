@@ -19,7 +19,7 @@
 
             <div>
                 <label class="block text-gray-600 mb-1">Código de empleado</label>
-                <input type="text" name="cod_empleado" placeholder="E001"
+                <input type="text" name="cod_empleado" value="{{$codigo}}" readonly
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 

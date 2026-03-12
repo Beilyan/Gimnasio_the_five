@@ -47,7 +47,10 @@ class PersonaController extends Controller
         return redirect()->route('persona.mostrar');
     }
 
-    function eliminar(){
+    function eliminar($id){
+        $persona = Persona::findOrFail($id);
+        $persona -> delete();
 
+        return redirect()->route('persona.mostrar');
     }
 }
