@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+<h1>Nuevo proveedor</h1>
 <form action="{{route('proveedor.guardar')}}" method="POST">
     @csrf
     <label for="">Nombre</label> <br>
@@ -14,3 +17,4 @@
 
     <input type="submit" value="Guardar">
 </form>
+@endsection 

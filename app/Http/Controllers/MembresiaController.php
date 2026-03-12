@@ -41,7 +41,10 @@ class MembresiaController extends Controller
         return redirect()->route('membresia.mostrar');
     }
 
-    function eliminar(){
+    function eliminar($id){
+        $membresia = Membresia::findOrFail($id);
+        $membresia -> delete();
 
+        return redirect()->route('membresia.mostrar');
     }
 }

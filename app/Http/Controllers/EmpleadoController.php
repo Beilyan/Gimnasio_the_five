@@ -10,8 +10,16 @@ class EmpleadoController extends Controller
 {
     function nueva(){
         $persona = Persona::all();
+        $ultimo = Empleado::orderBy('id','desc')->first();
+
+    if($ultimo){
+        $numero = intval(substr($ultimo->cod_empleado,1)) + 1;
+    }else{
+        $numero = 1;
+    }
+    $codigo = 'E'.str_pad($numero,3,'0',STR_PAD_LEFT);
 //Se llama igual que la variable pero sin signo de pesos v
-        return view('formulario_empleado', compact('persona')); 
+        return view('formulario_empleado', compact('persona', 'codigo')); 
     }
 
     function guardar(Request $req){
@@ -53,7 +61,10 @@ class EmpleadoController extends Controller
         return redirect()->route('empleado.mostrar');
     }
 
-    function eliminar(){
+    function eliminar($id){
+        $empleado = Empleado::findOrFail($id);
+        $empleado -> delete();
 
+        return redirect()->route('empleado.mostrar');
     }
 }

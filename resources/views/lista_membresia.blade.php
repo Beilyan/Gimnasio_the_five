@@ -1,4 +1,7 @@
-<table>
+@extends('layouts.app')
+@section('content')
+<h1>Membresia</h1>
+<table class="table">
     <tr>
         <th>Nombre</th>
         <th>Descripción</th>
@@ -13,7 +16,9 @@
             <td>{{$fila->costo}}</td>
             <td>{{$fila->duracion_meses}}</td>
             <td><a href="{{route('membresia.editar', $fila->id)}}">Editar</a></td>
+            <td><a href="{{route('membresia.eliminar', $fila->id)}}">Eliminar</a></td>
     @endforeach
 </table>
 
 <a href="/membresia/nueva"><button type="button">Nueva membresia</button></a>
+@endsection 
