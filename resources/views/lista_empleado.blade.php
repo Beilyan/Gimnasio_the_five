@@ -1,3 +1,7 @@
+@extends('layouts.app')
+@section('content')
+
+
 <table>
     <tr>
         <th>Codigo</th>
@@ -19,3 +23,4 @@
 </table>
 
 <a href="/empleado/nueva"><button type="button">Nuevo empleado</button></a>
+@endsection 

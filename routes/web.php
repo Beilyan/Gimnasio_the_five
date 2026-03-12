@@ -15,6 +15,7 @@ Route::post('/persona/guardar', [PersonaController::class, 'guardar'])->name('pe
 Route::get('/persona/lista', [PersonaController::class, 'mostrar'])->name('persona.mostrar');
 Route::get('/persona/editar/{id}', [PersonaController::class, 'editar'])->name('persona.editar');
 Route::post('/persona/actualizar', [PersonaController::class, 'actualizar'])->name('persona.actualizar');
+
 //proveedoor
 Route::get('/proveedor/nueva', function () {
     return view('formulario_proveedor');
@@ -32,6 +33,11 @@ Route::get('/membresia/lista', [MembresiaController::class, 'mostrar'])->name('m
 Route::get('/membresia/editar/{id}', [MembresiaController::class, 'editar'])->name('membresia.editar');
 Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])->name('membresia.actualizar');
 //cliente
+Route::get('/cliente/nueva', [ClienteController::class, 'nueva'])->name('cliente.nueva');
+Route::post('/cliente/guardar', [ClienteController::class, 'guardar'])->name('cliente.guardar');
+Route::get('/cliente/lista', [ClienteController::class, 'mostrar'])->name('cliente.mostrar');
+Route::get('/cliente/editar/{id}', [ClienteController::class, 'editar'])->name('cliente.editar');
+Route::post('/cliente/actualizar', [ClienteController::class, 'actualizar'])->name('cliente.actualizar');
 
 //empleado
 Route::get('/empleado/nueva', [EmpleadoController::class, 'nueva'])->name('empleado.nueva');
