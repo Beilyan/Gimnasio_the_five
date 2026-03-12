@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <table>
     <tr>
         <th>Nombres</th>
@@ -23,3 +25,4 @@
 </table>
 
 <a href="/persona/nueva"><button type="button">Nueva persona</button></a>
+@endsection 
