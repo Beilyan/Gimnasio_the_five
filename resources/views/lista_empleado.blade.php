@@ -58,6 +58,12 @@
                                 Editar
                             </a>
                         </td>
+                        <td class="p-3">
+                        <a href="{{route('empleado.eliminar', $fila->id)}}"
+                        class="bg-gray-700 text-white px-3 py-1 rounded-md hover:bg-black hover:scale-105 transition duration-200 shadow">
+                            Eliminar
+                        </a>
+                    </td>
                     </tr>
 
                     @endforeach
