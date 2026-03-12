@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+<h1>Nueva persona</h1>
 <form action="{{route('persona.guardar')}}" method="POST">
     @csrf
     <label for="">Nombres</label> <br>
@@ -26,3 +29,4 @@
 
     <input type="submit" value="Guardar">
 </form>
+@endsection 

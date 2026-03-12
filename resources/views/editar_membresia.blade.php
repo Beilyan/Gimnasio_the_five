@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+<h1>Editar membresia</h1>
 <form action="{{route('membresia.actualizar')}}" method="POST">
     @csrf
     <input type="hidden" name="id" value="{{$membresia->id}}">
@@ -16,3 +19,4 @@
 
     <input type="submit" value="Guardar">
 </form>
+@endsection 

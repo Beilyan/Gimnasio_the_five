@@ -1,14 +1,13 @@
 @extends('layouts.app')
 @section('content')
-
-
-<table>
+<h1>Empleados</h1>
+<table class="table">
     <tr>
         <th>Codigo</th>
         <th>Nombre</th>
         <th>Apellido paterno</th>
         <th>Apellido materno</th>
-        <th>rol</th>
+        <th>Rol</th>
         <th>Acciones</th>
     </tr> 
     @foreach ($empleado as $fila) 
@@ -19,6 +18,7 @@
             <td>{{$fila->materno}}</td>
             <td>{{$fila->rol}}</td>
             <td><a href="{{route('empleado.editar', $fila->id)}}">Editar</a></td>
+            <td><a href="{{route('empleado.eliminar', $fila->id)}}">Eliminar</a></td>
     @endforeach
 </table>
 

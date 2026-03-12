@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+<h1>Editar proveedor</h1>
 <form action="{{route('proveedor.actualizar')}}" method="POST">
     @csrf
     <input type="hidden" name="id" value="{{$proveedor->id}}">
@@ -16,3 +19,4 @@
 
     <input type="submit" value="Guardar">
 </form>
+@endsection 

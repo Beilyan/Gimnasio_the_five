@@ -41,7 +41,10 @@ class ProveedorController extends Controller
         return redirect()->route('proveedor.mostrar');
     }
 
-    function eliminar(){
+    function eliminar($id){
+        $proveedor = Proveedor::findOrFail($id);
+        $proveedor -> delete();
 
+        return redirect()->route('proveedor.mostrar');
     }
 }
