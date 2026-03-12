@@ -58,6 +58,10 @@ Route::get('/tienda', function () {
     return view('tienda');
 })->name('tienda');
 
+Route::get('/operaciones', function () {
+    return view('operaciones');
+})->name('operaciones');
+
 // RUTA DE ENTRENADORES
 Route::get('/entrenador', function () {
     return view('entrenador');

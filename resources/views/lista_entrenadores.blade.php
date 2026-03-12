@@ -145,6 +145,12 @@
             <span>Tienda</span>
         </a>
 
+        <a href="{{ route('operaciones') }}"
+           class="nav-item text-center {{ request()->routeIs('operaciones') ? 'active' : '' }}">
+            <i class="bi bi-bug"></i>
+            <span>Operaciones</span>
+        </a>
+
     </div>
 </nav>
 {{-- FIN DE BARRA DE NAVEGACIÓN --}}

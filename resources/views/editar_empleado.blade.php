@@ -1,22 +1,69 @@
-<form action="{{route('empleado.actualizar')}}" method="POST">
-    @csrf
-    <input type="hidden" name="id" value="{{$empleado->id}}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Empleado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen p-6">
 
-    <label for="">Codigo de empleado</label> <br>
-    <input type="text" name="cod_empleado" value="{{$empleado->cod_empleado}}" placeholder="E001" required> <br>
+    <div class="bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 rounded-2xl p-10 w-full max-w-3xl border">
 
-    <label for="">Persona</label> <br>
-    <select name="persona_id">
-        @foreach ($persona as $item)
-            <option {{$item->id == $empleado->persona_id ? 'selected' : ''}} value="{{$item->id}}">{{$item->nom_persona}}</option>
-        @endforeach
-    </select> <br>
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-10">
+            Editar Empleado
+        </h2>
 
-    <label for="">Rol</label> <br>
-    <select name="rol" required>
-        <option value="Encargado" {{ $empleado->rol == 'Encargado' ? 'selected' : '' }}>Encargado</option>
-        <option value="Entrenador" {{ $empleado->rol == 'Entrenador' ? 'selected' : '' }}>Entrenador</option>
-    </select> <br>
+        <form action="{{route('empleado.actualizar')}}" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            @csrf
 
-    <input type="submit" value="Guardar">
-</form>
+            <input type="hidden" name="id" value="{{$empleado->id}}">
+
+            <div>
+                <label class="block text-gray-600 mb-1">Código de empleado</label>
+                <input type="text" name="cod_empleado" value="{{$empleado->cod_empleado}}"
+                class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+            </div>
+
+            <div>
+                <label class="block text-gray-600 mb-1">Persona</label>
+                <select name="persona_id"
+                class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+
+                    @foreach ($persona as $item)
+                        <option value="{{$item->id}}" {{$item->id == $empleado->persona_id ? 'selected' : ''}}>
+                            {{$item->nom_persona}}
+                        </option>
+                    @endforeach
+
+                </select>
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block text-gray-600 mb-1">Rol</label>
+                <select name="rol"
+                class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+
+                    <option value="Encargado" {{ $empleado->rol == 'Encargado' ? 'selected' : '' }}>
+                        Encargado
+                    </option>
+
+                    <option value="Entrenador" {{ $empleado->rol == 'Entrenador' ? 'selected' : '' }}>
+                        Entrenador
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="md:col-span-2">
+                <button type="submit"
+                class="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-black hover:scale-105 transition duration-300 shadow-lg">
+                    Actualizar Empleado
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
