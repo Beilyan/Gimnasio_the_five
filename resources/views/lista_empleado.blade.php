@@ -1,11 +1,10 @@
-@extends('layouts.app')
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Empleados</title>
+    <title>Document</title>
+    @include('uso')
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white p-10">
@@ -13,7 +12,10 @@
     <div class="max-w-7xl mx-auto bg-white shadow-lg hover:shadow-2xl transition duration-300 rounded-xl p-8 border">
 
         <div class="flex justify-between items-center mb-6">
-
+            <a href="{{ route('operaciones') }}#cartas"
+        class="text-gray-700 hover:text-black text-3xl transition">
+            <i class="bi bi-box-arrow-in-left fs-1"></i>
+        </a>
             <h1 class="text-3xl font-semibold text-gray-800">
                 Lista de Empleados
             </h1>
@@ -52,27 +54,26 @@
                         <td class="p-3">{{$fila->materno}}</td>
                         <td class="p-3">{{$fila->rol}}</td>
 
-                        <td class="p-3">
+                        <td class="p-3 flex gap-2">
                             <a href="{{route('empleado.editar', $fila->id)}}"
                                class="bg-gray-700 text-white px-3 py-1 rounded-md hover:bg-black hover:scale-105 transition duration-200 shadow">
                                 Editar
                             </a>
+
+                            <a href="{{route('empleado.eliminar', $fila->id)}}"
+                               class="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-800 hover:scale-105 transition duration-200 shadow">
+                                Eliminar
+                            </a>
                         </td>
-                        <td class="p-3">
-                        <a href="{{route('empleado.eliminar', $fila->id)}}"
-                        class="bg-gray-700 text-white px-3 py-1 rounded-md hover:bg-black hover:scale-105 transition duration-200 shadow">
-                            Eliminar
-                        </a>
-                    </td>
                     </tr>
 
                     @endforeach
+
                 </tbody>
             </table>
+
         </div>
     </div>
 
 </body>
-
 </html>
-@endsection 

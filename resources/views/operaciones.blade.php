@@ -16,62 +16,62 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">REGISTRADOR DE PERSONAS</h5>
+                <h5 class="text-xl font-semibold mb-3">PERSONAS</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes registrar personas a traves de un formulario.
+                    En este apartado puedes hacer operaciones sobre personas a traves de formularios.
                 </p>
-                <a href="" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Registrar Persona
+                <a href="{{route('persona.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ejecutar
                 </a>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">REGISTRADOR DE EMPLEADOS</h5>
+                <h5 class="text-xl font-semibold mb-3">EMPLEADOS</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes registrar empleados a traves de un formulario.
+                    En este apartado puedes hacer operaciones sobre empleados a traves de formularios.
                 </p>
-                <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Registrar Empleado
+                <a href="{{route('empleado.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ejecutar
                 </a>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">REGISTRADOR DE CLIENTES</h5>
+                <h5 class="text-xl font-semibold mb-3">CLIENTES</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes registrar clientes a traves de un formulario.
+                    En este apartado puedes hacer operaciones sobre clientes a traves de formularios.
                 </p>
-                <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Registrar Cliente
+                <a href="{{route('cliente.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                     Ejecutar
                 </a>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">REGISTRADOR DE PROVEEDORES</h5>
+                <h5 class="text-xl font-semibold mb-3">PROVEEDORES</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes registrar proveedores a traves de un formulario..
+                    En este apartado puedes hacer oparaciones sobre proveedores a traves de formularios.
                 </p>
-                <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Registrar Proveedor
+                <a href="{{route('proveedor.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ejecutar
                 </a>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">REGISTRADOR DE MEMBRESÍAS</h5>
+                <h5 class="text-xl font-semibold mb-3">MEMBRESÍAS</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes registrar membresías a traves de un formulario.
+                    En este apartado puedes hacer operaciones sobre membresías a traves de formularios.
                 </p>
-                <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Registrar Membresía
+                <a href="{{route('membresia.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ejecutar
                 </a>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">Special title treatment</h5>
+                <h5 class="text-xl font-semibold mb-3">PRODUCTOS</h5>
                 <p class="text-gray-600 mb-4">
-                    With supporting text below as a natural lead-in to additional content.
+                    En este apartado puedes hacer operaciones sobre productos a traves de formularios.
                 </p>
-                <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Go somewhere
+                <a href="{{route('producto.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ejecutar
                 </a>
             </div>
 
