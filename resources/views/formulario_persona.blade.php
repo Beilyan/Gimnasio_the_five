@@ -1,5 +1,3 @@
-@extends('layouts.app')
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    @include('uso')
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -14,6 +13,11 @@
     <div class="min-h-screen bg-white flex items-center justify-center p-6">
 
         <div class="bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-10 w-full max-w-6xl border">
+            
+            <a href="{{ route('persona.mostrar') }}#cartas"
+            class="text-gray-700 hover:text-black text-3xl transition">
+                <i class="bi bi-box-arrow-in-left fs-1"></i>
+            </a>
             <h2 class="text-3xl font-semibold text-center text-gray-800 mb-10">Registro de Persona</h2>
 
             <form action="{{route('persona.guardar')}}" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -78,4 +82,3 @@
 
 </body>
 </html>
-@endsection 
