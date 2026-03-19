@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('abdomen') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Giro Ruso (sin equipo)</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Siéntate en el suelo con las rodillas flexionadas y los pies apoyados en el suelo. Inclina tu torso hacia atrás unos 45 grados.
+Mantén los brazos extendidos frente a ti y junta las manos. Levanta los pies del suelo y equilibra el cuerpo en los huesos de tu cola.
+Gira tu torso hacia la izquierda mientras mantienes los brazos rectos. Luego, gira hacia la derecha.
+Haz 10-12 repeticiones en cada lado.</h3>
                 </div>
             </div>
         </div>

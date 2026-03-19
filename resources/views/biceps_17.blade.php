@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('biceps') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Curl alternado con mancuerna</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,11 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>La ejecución adecuada del ejercicio inicia de pie, la persona debe encontrarse sujetando un par de mancuernas con los brazos extendidos completamente hacia abajo. Mantén las palmas orientadas hacia dentro y las rodillas flexionadas de forma leve.
+El curl alterno comprende que los codos deben estar pegados a la región lateral del cuerpo y se deben elevar las mancuernas de forma simultánea, girando las palmas de las manos hacia arriba y hacia afuera.
+De tal forma, se permite que al final de cada repetición, queden hacia fuera de forma ligera. El bíceps debe ser contraído contando uno, bajando la mancuerna de regreso a la posición inicial.
+Este movimiento debe ser repetido con ambos brazos, alternando uno con otro.
+</h3>
                 </div>
             </div>
         </div>

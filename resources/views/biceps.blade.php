@@ -34,220 +34,220 @@
   
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_1') }}">
+      <a href="{{ route('biceps_1') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press de pecho declinado en máquina</h3>
+        <h3>Curl predicador con polea</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card ">
-      <a href="{{ route('pecho_2') }}">
+      <a href="{{ route('biceps_2') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press martillo en banco inclinado con mancuernas</h3>
+        <h3>Curl predicador a una mano con mancuerna</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_3') }}">
+      <a href="{{ route('biceps_3') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press martillo con mancuernas en banco plano</h3>
+        <h3>Curl martillo en polea (con cuerda)</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_4') }}">
+      <a href="{{ route('biceps_4') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press de banca inclinado con barra</h3>
+        <h3>Curl concentrado con mancuerna agarre prono</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_5') }}">
+      <a href="{{ route('biceps_5') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press de banca con mancuernas</h3>
+        <h3>Curl con barra Z</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_6') }}">
+      <a href="{{ route('biceps_6') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press alternado con mancuernas en banco plano</h3>
+        <h3>Curl con barra Z (agarre abierto)</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_7') }}">
+      <a href="{{ route('biceps_7') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Fondos de pecho en máquina asistida</h3>
+        <h3>Curl alternado con banda elástica</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_8') }}">
+      <a href="{{ route('biceps_8') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Flexiones con toque de pecho</h3>
+        <h3>Curl agarre prono con mancuernas</h3>
       </div>
     </div>
   </div>
 
     <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_9') }}">
+      <a href="{{ route('biceps_9') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Flexiones con banda de resistencia</h3>
+        <h3>Curl a un brazo en polea</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card ">
-      <a href="{{ route('pecho_10') }}">
+      <a href="{{ route('biceps_10') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Flexiones sobre balón medicinal</h3>
+        <h3>Curl de martillo cruzado con mancuernas</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_11') }}">
+      <a href="{{ route('biceps_11') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Flexiones a una mano</h3>
+        <h3>Curl concentrado en máquina</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_12') }}">
+      <a href="{{ route('biceps_12') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Flexiones abiertas</h3>
+        <h3>Curl en polea baja con barra recta</h3>
       </div>
     </div>
   </div>
 
     <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_13') }}">
+      <a href="{{ route('biceps_13') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Aperturas en banco plano con polea</h3>
+        <h3>Curl predicador con mancuernas (agarre supino)</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card ">
-      <a href="{{ route('pecho_14') }}">
+      <a href="{{ route('biceps_14') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Aperturas declinado en polea</h3>
+        <h3>Bíceps, brazos en cruz en polea alta</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_15') }}">
+      <a href="{{ route('biceps_15') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Squeeze Bench Press</h3>
+        <h3>Curl de bíceps en banco Scott</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_16') }}">
+      <a href="{{ route('biceps_16') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Squeeze Press inclinado con mancuernas</h3>
+        <h3>Curl martillo con mancuernas</h3>
       </div>
     </div>
   </div>
 
     <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_17') }}">
+      <a href="{{ route('biceps_17') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Vuelos a una mano con mancuerna</h3>
+        <h3>Curl alternado con mancuerna</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card ">
-      <a href="{{ route('pecho_18') }}">
+      <a href="{{ route('biceps_18') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Fondos de pecho</h3>
+        <h3>Curl de bíceps</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_19') }}">
+      <a href="{{ route('biceps_19') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Aperturas pec deck de pecho</h3>
+        <h3>Curl invertido con barra</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('pecho_20') }}">
+      <a href="{{ route('biceps_20') }}">
       <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Aperturas con mancuernas en banco plano</h3>
+        <h3>Curl Zottman con mancuernas</h3>
       </div>
     </div>
   </div>

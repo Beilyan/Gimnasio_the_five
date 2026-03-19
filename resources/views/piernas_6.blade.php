@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('pierna') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Sentadilla split en máquina Smith</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Colócate de pie frente a la máquina Smith con un pie adelante y otro detrás, separados por una distancia cómoda.
+Engancha la barra en la altura adecuada para tu altura y posiciónate debajo de ella para que quede apoyada en la parte superior de tu espalda.
+Dobla ambas rodillas hasta que la pierna trasera quede a unos pocos centímetros del suelo y la pierna delantera forme un ángulo de 90 grados. Mantén la espalda recta durante todo el ejercicio.
+Vuelve a la posición inicial lentamente y repite el movimiento durante 10 a 12 repeticiones antes de cambiar de pierna.</h3>
                 </div>
             </div>
         </div>

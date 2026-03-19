@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Aperturas en banco plano con polea</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Asegúrate de tener las poleas fijadas en la parte inferior de una máquina de cables y coloca un banco plano en el centro.
+Toma los mangos de las poleas y acuéstate en el banco con los brazos extendidos y las palmas de las manos mirando hacia arriba.
+Lentamente, baja los brazos hacia los lados hasta que sientas un estiramiento en los músculos del pecho.
+Regresa a la posición inicial, llevando los brazos hacia arriba y juntando las manijas de las poleas.</h3>
                 </div>
             </div>
         </div>

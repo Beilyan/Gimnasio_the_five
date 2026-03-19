@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Aperturas declinado en polea</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Ajusta el peso deseado en la máquina y colócate de espaldas a ella. Toma los mangos de la polea en cada mano y párate en posición de estocada, con un pie adelante y el otro atrás.
+Con los brazos extendidos hacia los lados y los codos ligeramente doblados, lleva los brazos hacia adelante, cruzándolos frente a tu cuerpo. Mantén los codos ligeramente doblados en todo momento.
+Lenta y controladamente, regresa los brazos a la posición inicial, abriéndolos hacia los lados hasta que queden paralelos al suelo.
+Repite el movimiento durante el número deseado de repeticiones.</h3>
                 </div>
             </div>
         </div>

@@ -79,7 +79,7 @@
       <div class="card-body text-center">
         <h6>Espalda</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('espalda') }}">
       <img src="{{ asset('img/espalda.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>
@@ -90,7 +90,7 @@
       <div class="card-body text-center">
         <h6>Bíceps</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('biceps') }}">
       <img src="{{ asset('img/biceps.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>
@@ -101,7 +101,7 @@
       <div class="card-body text-center">
         <h6>Tríceps</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('triceps') }}">
       <img src="{{ asset('img/triceps.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>
@@ -112,7 +112,7 @@
       <div class="card-body text-center">
         <h6>Abdomen</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('abdomen') }}">
       <img src="{{ asset('img/abdomen.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>
@@ -123,7 +123,7 @@
       <div class="card-body text-center">
         <h6>Hombros</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('hombros') }}">
       <img src="{{ asset('img/hombros.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>
@@ -134,7 +134,7 @@
       <div class="card-body text-center">
         <h6>Pantorrillas</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('pantorrillas') }}">
       <img src="{{ asset('img/pantorrillas.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>
@@ -145,7 +145,7 @@
       <div class="card-body text-center">
         <h6>Piernas</h6>
       </div>
-      <a href="">
+      <a href="{{ asset('pierna') }}">
       <img src="{{ asset('img/piernas.jpeg') }}" class="card-img-top" alt="...">
       </a>
     </div>

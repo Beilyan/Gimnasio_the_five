@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('hombros') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Press de hombros sentado con mancuernas (agarre neutro)</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Siéntate en un banco con respaldo vertical, sostén una mancuerna en cada mano con los brazos a los lados y los codos doblados en un ángulo de 90 grados.
+Levanta lentamente las mancuernas hacia arriba hasta que estén por encima de tu cabeza, manteniendo los codos ligeramente doblados.
+Mantén las mancuernas sobre tu cabeza por un segundo y luego bájalas lentamente hacia abajo hasta que tus codos estén doblados en un ángulo de 90 grados.
+Repite el movimiento para completar una serie, asegurándote de mantener una postura adecuada y un movimiento controlado en todo momento.</h3>
                 </div>
             </div>
         </div>
