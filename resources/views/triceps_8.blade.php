@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('triceps') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Flexiones diamante de rodillas</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Comienza por colocarte en posición de tabla, con las manos debajo de los hombros y los dedos de los pies en el suelo.
+Luego, junta las rodillas para que se toquen y forma un diamante con las manos colocándolas debajo del pecho.
+Mientras mantienes los codos cerca del cuerpo, baja el pecho hacia el suelo doblando los brazos y mantén la espalda recta.
+Empuja hacia arriba con las palmas de las manos para volver a la posición inicial. Repite el movimiento durante 3 series de 10 a 12 repeticiones.</h3>
                 </div>
             </div>
         </div>

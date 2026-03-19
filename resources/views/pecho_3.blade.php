@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Press martillo con mancuernas en banco plano</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Siéntate en un banco plano con una mancuerna en cada mano a la altura de los hombros, con las palmas de las manos mirando hacia adentro y los codos doblados en un ángulo de 90 grados.
+Extiende los brazos hacia arriba para que las mancuernas se encuentren cerca una de la otra, sin llegar a tocarse, y mantén los codos ligeramente flexionados.
+Lentamente, baja las mancuernas hacia los lados de tu cuerpo, manteniendo los codos cerca de las costillas y los antebrazos en una posición perpendicular al suelo.
+Vuelve a la posición inicial alzando las mancuernas hacia arriba y juntándolas cerca una de la otra. Repite el ejercicio según el número de repeticiones deseadas.</h3>
                 </div>
             </div>
         </div>

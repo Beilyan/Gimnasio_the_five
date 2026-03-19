@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('biceps') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Curl de martillo cruzado con mancuernas</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,9 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Para iniciar, párese con las piernas completamente derechas colocadas a la distancia del ancho de los hombros. Luego, tome una mancuerna en cada mano con un agarre neutro, dejando que las palmas de las manos queden hacia adentro. Manteniendo las palmas hacia adentro, levante una de las mancuernas hacia el hombro opuesto hasta sentir la presión sobre el bíceps. Recuerde tener la espalda recta y la mirada hacia adelante.
+Continúe el movimiento hasta que la mancuerna toque el hombro y espere unos segundos. Regrese lentamente a la posición inicial.
+Repita el mismo movimiento con el brazo contrario y realice el ejercicio hasta completar las repeticiones que desee.</h3>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('pantorrillas') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Elevación de talones de pie en máquina</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Lo primero que harás será colocar el peso con el que deseas trabajar en la máquina. Hecho esto, te sentarás y pondrás ambos pies en las almohadillas; mientras que con las dos manos sujetarás la parte superior de la máquina, esto te dará mayor soporte.
+El peso que has colocado debe de encontrarse sobre tus hombros al momento en que eleves los talones; hecho esto, jala los talones hacia tus glúteos.
+Tu espalda debe mantenerse durante todo el ejercicio lo más recta posible. Una vez que completes el ejercicio, jalando los talones lo más que puedas hacia tus glúteos, regresa a la posición del inicio, descendiendo los talones no tan rápido.
+No te olvides de llevar a cabo un buen ritmo de respiración, esto te facilitará completar el ejercicio de una mejor forma.</h3>
                 </div>
             </div>
         </div>

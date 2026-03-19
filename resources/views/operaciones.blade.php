@@ -21,7 +21,7 @@
                     En este apartado puedes hacer operaciones sobre personas a traves de formularios.
                 </p>
                 <a href="{{route('persona.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Ejecutar
+                    Ver
                 </a>
             </div>
 
@@ -31,7 +31,7 @@
                     En este apartado puedes hacer operaciones sobre empleados a traves de formularios.
                 </p>
                 <a href="{{route('empleado.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Ejecutar
+                    Ver
                 </a>
             </div>
 
@@ -41,7 +41,7 @@
                     En este apartado puedes hacer operaciones sobre clientes a traves de formularios.
                 </p>
                 <a href="{{route('cliente.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                     Ejecutar
+                     Ver
                 </a>
             </div>
 
@@ -51,7 +51,7 @@
                     En este apartado puedes hacer oparaciones sobre proveedores a traves de formularios.
                 </p>
                 <a href="{{route('proveedor.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Ejecutar
+                    Ver
                 </a>
             </div>
 
@@ -61,7 +61,7 @@
                     En este apartado puedes hacer operaciones sobre membresías a traves de formularios.
                 </p>
                 <a href="{{route('membresia.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Ejecutar
+                    Ver
                 </a>
             </div>
 
@@ -71,7 +71,7 @@
                     En este apartado puedes hacer operaciones sobre productos a traves de formularios.
                 </p>
                 <a href="{{route('producto.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Ejecutar
+                    Ver
                 </a>
             </div>
 

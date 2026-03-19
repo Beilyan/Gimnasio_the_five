@@ -12,7 +12,7 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+        <a href="{{ route('hombros') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
         <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
@@ -21,7 +21,7 @@
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
-                <h2 class="fw-bold mb-2">Press de pecho declinado en máquina</h2>
+                <h2 class="fw-bold mb-2">Rotación interna de hombro en polea</h2>
             </div>
     </div>
 {{-- FIN DE FOTOS --}}
@@ -33,10 +33,10 @@
         <div class="col-md-12">
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta el asiento y la almohadilla de la máquina para que se adapte a tu altura y posición de entrenamiento.
-Siéntate en la máquina con la espalda recta y los pies firmes en el suelo.
-Agarra las asas de la máquina y comienza a empujar hacia adelante, manteniendo los codos ligeramente flexionados.
-Lleva las asas hacia tu pecho y luego extiende los brazos para volver a la posición inicial.</h3>
+                    <h3>Comienza ajustando la altura del cable de la polea a la altura de tu codo.
+Párate de lado, con el brazo más alejado de la polea sosteniendo la manija con el codo doblado a 90 grados.
+Mantén el codo pegado al costado del cuerpo y rota el brazo hacia adentro, cruzando el cuerpo y acercando la manija hacia tu torso. Asegúrate de que el hombro permanezca estable durante todo el movimiento.
+Regresa a la posición inicial lentamente y repite el movimiento para completar el conjunto de repeticiones. Luego cambia de lado y repite con el otro brazo.</h3>
                 </div>
             </div>
         </div>
