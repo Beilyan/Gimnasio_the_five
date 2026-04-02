@@ -34,7 +34,22 @@ class EntrenadorDetalleController extends Controller
     }
 
     function mostrar(){
-        $entrenador = EntrenadorDetalle::select('entrenador_detalles.*', 'empleados.*','personas.nom_persona as nom', 'personas.apaterno as paterno', 'personas.amaterno as materno')->join('empleados', 'empleados.id', '=', 'entrenador_detalles.empleado_id')->join('personas', 'personas.id', '=', 'empleados.persona_id')->get();
+        $entrenador = EntrenadorDetalle::select(
+    'entrenador_detalles.id as entrenador_id',
+    'entrenador_detalles.empleado_id',
+    'entrenador_detalles.facebook',
+    'entrenador_detalles.instagram',
+    'entrenador_detalles.otro',
+    'entrenador_detalles.descripcion',
+    'entrenador_detalles.img_perfil',
+    'entrenador_detalles.img_portada',
+    'personas.nom_persona as nom',
+    'personas.apaterno as paterno',
+    'personas.amaterno as materno'
+)
+->join('empleados', 'empleados.id', '=', 'entrenador_detalles.empleado_id')
+->join('personas', 'personas.id', '=', 'empleados.persona_id')
+->get();
         
         return view('lista_detalle_entrenador', compact('entrenador'));
     }

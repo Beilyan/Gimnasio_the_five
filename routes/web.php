@@ -9,6 +9,7 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\EntrenadorDetalleController;
+use App\Http\Controllers\HorarioController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -85,6 +86,14 @@ Route::get('/entrenador/lista', [EntrenadorDetalleController::class, 'mostrar'])
 Route::get('/entrenador/editar/{id}', [EntrenadorDetalleController::class, 'editar'])->name('entrenador.editar');
 Route::post('/entrenador/actualizar', [EntrenadorDetalleController::class, 'actualizar'])->name('entrenador.actualizar');
 Route::get('/entrenador/eliminar/{id}', [EntrenadorDetalleController::class, 'eliminar'])->name('entrenador.eliminar');
+
+//horario
+Route::get('/horario/nueva', [HorarioController::class, 'nueva'])->name('horario.nueva');
+Route::post('/horario/guardar', [HorarioController::class, 'guardar'])->name('horario.guardar');
+Route::get('/horario/lista', [HorarioController::class, 'mostrar'])->name('horario.mostrar');
+Route::get('/horario/editar/{id}', [HorarioController::class, 'editar'])->name('horario.editar');
+Route::post('/horario/actualizar', [HorarioController::class, 'actualizar'])->name('horario.actualizar');
+Route::get('/horario/eliminar/{id}', [HorarioController::class, 'eliminar'])->name('horario.eliminar');
 
 // LEONEL
 // RUTAS DE BARRA DE NEVEGACIÓN

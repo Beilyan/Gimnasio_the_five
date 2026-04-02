@@ -57,10 +57,10 @@
                     <td class="p-3">{{$fila->nom}}</td>
                     <td class="p-3">{{$fila->paterno}}</td>
                     <td class="p-3">{{$fila->materno}}</td>
-                    <td>{{$fila->facebook}}</td>
-                    <td>{{$fila->instagram}}</td>
-                    <td>{{$fila->otro}}</td>
-                    <td>{{$fila->descripcion}}</td>
+                    <td class="p-3">{{$fila->facebook}}</td>
+                    <td class="p-3">{{$fila->instagram}}</td>
+                    <td class="p-3">{{$fila->otro}}</td>
+                    <td class="p-3">{{$fila->descripcion}}</td>
                     <td class="p-3">
                         <img src="{{ asset('storage/'.$fila->img_perfil) }}" class="w-16 h-16 object-cover rounded">
                     </td>
@@ -69,12 +69,12 @@
                     </td>
                     <td class="p-3 flex gap-2">
 
-                        <a href="{{route('entrenador.editar', $fila->id)}}"
+                        <a href="{{route('entrenador.editar', $fila->entrenador_id)}}"
                         class="bg-gray-700 text-white px-3 py-1 rounded-md hover:bg-black hover:scale-105 transition duration-200 shadow">
                             Editar
                         </a>
 
-                        <a href="{{route('entrenador.eliminar', $fila->id)}}"
+                        <a href="{{route('entrenador.eliminar', $fila->entrenador_id)}}"
                         class="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-800 hover:scale-105 transition duration-200 shadow">
                             Eliminar
                         </a>
