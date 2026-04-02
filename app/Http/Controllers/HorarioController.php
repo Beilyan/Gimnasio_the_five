@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Horario;
 use App\Models\Empleado;
+use App\Models\EntrenadorDetalle;
 
 class HorarioController extends Controller
 {
@@ -16,17 +17,30 @@ class HorarioController extends Controller
 
     function guardar(Request $req){
         $horario = new Horario();
-        $entrenador->empleado_id = $req->empleado_id;
-        $entrenador->dia = $req->dia;
-        $entrenador->hora_inicio = $req->hora_inicio;
-        $entrenador->hora_fin = $req->hora_fin;
+        $horario->entrenador_id = $req->entrenador_id;
+        $horario->dia = $req->dia;
+        $horario->hora_inicio = $req->hora_inicio;
+        $horario->hora_fin = $req->hora_fin;
 
-        $entrenador->save();
+        $horario->save();
         return redirect()->route('horario.mostrar');
     }
 
     function mostrar(){
-        $horario = Horario::select('horarios.*', 'empleados.*','personas.nom_persona as nom', 'personas.apaterno as paterno', 'personas.amaterno as materno')->join('empleados', 'empleados.id', '=', 'horarios.empleado_id')->join('personas', 'personas.id', '=', 'empleados.persona_id')->get();
+        $horario = Horario::select(
+    'horarios.id as horario_id',
+    'horarios.entrenador_id',
+    'horarios.dia',
+    'horarios.hora_inicio',
+    'horarios.hora_fin',
+    'personas.nom_persona as nom',
+    'personas.apaterno as paterno',
+    'personas.amaterno as materno'
+)
+->join('entrenador_detalles', 'entrenador_detalles.id', '=', 'horarios.entrenador_id')
+->join('empleados', 'empleados.id', '=', 'entrenador_detalles.empleado_id')
+->join('personas', 'personas.id', '=', 'empleados.persona_id')
+->get();
         
         return view('lista_horario', compact('horario'));
     }
@@ -34,26 +48,26 @@ class HorarioController extends Controller
     function editar($id){
         $horario = Horario::findOrFail($id);
 
-        // $empleados = Empleado::with('persona')->get();
+        $entrenadores = EntrenadorDetalle::with('empleado.persona')->get();
 
-        return view('lista_horario', compact('entrenador', 'empleados'));
+        return view('editar_horario', compact('horario', 'entrenadores'));
     }
 
     function actualizar(Request $req){
         $horario = Horario::findOrFail($req->id);
-        $horario->empleado_id = $req->empleado_id;
-        $entrenador->dia = $req->dia;
-        $entrenador->hora_inicio = $req->hora_inicio;
-        $entrenador->hora_fin = $req->hora_fin;
+        $horario->entrenador_id = $req->entrenador_id;
+        $horario->dia = $req->dia;
+        $horario->hora_inicio = $req->hora_inicio;
+        $horario->hora_fin = $req->hora_fin;
 
         $horario->save();
-        return redirect()->route('lista_horario');
+        return redirect()->route('horario.mostrar');
     }
 
     function eliminar($id){
         $horario = Horario::findOrFail($id);
         $horario -> delete();
 
-        return redirect()->route('lista_horario');
+        return redirect()->route('horario.mostrar');
     }
 }

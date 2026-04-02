@@ -27,7 +27,7 @@ Route::get('/persona/editar/{id}', [PersonaController::class, 'editar'])->name('
 Route::post('/persona/actualizar', [PersonaController::class, 'actualizar'])->name('persona.actualizar');
 Route::get('/persona/eliminar/{id}', [PersonaController::class, 'eliminar'])->name('persona.eliminar');
 
-//proveedoor
+//proveedor
 Route::get('/proveedor/nueva', function () {
     return view('formulario_proveedor');
 });
