@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('espalda') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('espalda') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/u7W1mDPAwVk"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Coloca un banco inclinado a aproximadamente 45 grados y siéntate en él con un par de mancuernas.
-Inclínate hacia adelante manteniendo la espalda recta, y deja caer los brazos hacia abajo, sosteniendo las mancuernas.
-Levanta las mancuernas hacia el pecho, manteniendo los codos cerca del cuerpo y los hombros hacia abajo y hacia atrás.
-Baja las mancuernas lentamente a la posición inicial y repite el ejercicio.</h3>
+                    <h3>1.- Coloca un banco inclinado a aproximadamente 45 grados y siéntate en él con un par de mancuernas.<br><br>
+2.- Inclínate hacia adelante manteniendo la espalda recta, y deja caer los brazos hacia abajo, sosteniendo las mancuernas.<br><br>
+3.- Levanta las mancuernas hacia el pecho, manteniendo los codos cerca del cuerpo y los hombros hacia abajo y hacia atrás.<br><br>
+4.- Baja las mancuernas lentamente a la posición inicial y repite el ejercicio.</h3>
                 </div>
             </div>
         </div>

@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('hombros') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('hombros') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/C_faZ70mdtU"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Ajusta la polea a una altura ligeramente por encima de la altura de los hombros.
-Agarra los mangos de la polea con ambas manos y da un paso hacia atrás para crear tensión en la polea.
-Manteniendo los brazos extendidos y los codos ligeramente flexionados, lleva los brazos hacia atrás y hacia afuera hasta que sientas un estiramiento en los músculos de la espalda.
-Lleva los brazos hacia adelante y hacia el centro del cuerpo hasta que los mangos de la polea se toquen frente al pecho.</h3>
+                    <h3>1.- Ajusta la polea a una altura ligeramente por encima de la altura de los hombros.<br><br>
+2.- Agarra los mangos de la polea con ambas manos y da un paso hacia atrás para crear tensión en la polea.<br><br>
+3.- Manteniendo los brazos extendidos y los codos ligeramente flexionados, lleva los brazos hacia atrás y hacia afuera hasta que sientas un estiramiento en los músculos de la espalda.<br><br>
+4.- Lleva los brazos hacia adelante y hacia el centro del cuerpo hasta que los mangos de la polea se toquen frente al pecho.</h3>
                 </div>
             </div>
         </div>

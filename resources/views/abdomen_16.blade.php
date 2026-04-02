@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('abdomen') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('abdomen') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/K79CoGMh7P0"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Acuéstate en el suelo y levanta las piernas en un ángulo de 90 grados. Coloca las manos detrás de la cabeza, los codos abiertos y las piernas juntas.
-Lleva el codo derecho hacia la rodilla izquierda mientras extiendes la pierna derecha hacia afuera. Al mismo tiempo, lleva el codo izquierdo hacia la rodilla derecha mientras extiendes la pierna izquierda hacia afuera.
-Alterna los movimientos de bicicleta, moviendo los codos y las piernas al mismo tiempo.
-Mantén los movimientos controlados y constantes, respirando de manera profunda y manteniendo el núcleo activado en todo momento.</h3>
+                    <h3>1.- Acuéstate en el suelo y levanta las piernas en un ángulo de 90 grados. Coloca las manos detrás de la cabeza, los codos abiertos y las piernas juntas.<br><br>
+2.- Lleva el codo derecho hacia la rodilla izquierda mientras extiendes la pierna derecha hacia afuera. Al mismo tiempo, lleva el codo izquierdo hacia la rodilla derecha mientras extiendes la pierna izquierda hacia afuera.<br><br>
+3.- Alterna los movimientos de bicicleta, moviendo los codos y las piernas al mismo tiempo.<br><br>
+4.- Mantén los movimientos controlados y constantes, respirando de manera profunda y manteniendo el núcleo activado en todo momento.</h3>
                 </div>
             </div>
         </div>

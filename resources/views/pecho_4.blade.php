@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pecho') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/9UtrVX5JsOU"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Coloca la barra en el soporte de la barra en un banco inclinado, asegurándote de que esté a la altura adecuada para que puedas alcanzarla cómodamente.
-Acuéstate en el banco y agarra la barra con las manos un poco más anchas que el ancho de los hombros, con los codos doblados y los brazos cerca de los lados del cuerpo.
-Levanta la barra de los soportes y lleva los brazos hacia arriba para sostener la barra sobre el pecho con los brazos extendidos.
-Lentamente baja la barra hacia el pecho, doblando los codos y manteniendo los antebrazos verticales. Detente cuando la barra toque suavemente el pecho, luego empuja hacia arriba la barra con fuerza, extendiendo los brazos para volver a la posición inicial.
+                    <h3>1.- Coloca la barra en el soporte de la barra en un banco inclinado, asegurándote de que esté a la altura adecuada para que puedas alcanzarla cómodamente.<br><br>
+2.- Acuéstate en el banco y agarra la barra con las manos un poco más anchas que el ancho de los hombros, con los codos doblados y los brazos cerca de los lados del cuerpo.<br><br>
+3.- Levanta la barra de los soportes y lleva los brazos hacia arriba para sostener la barra sobre el pecho con los brazos extendidos.<br><br>
+4.- Lentamente baja la barra hacia el pecho, doblando los codos y manteniendo los antebrazos verticales. <br><br>5.- Detente cuando la barra toque suavemente el pecho, luego empuja hacia arriba la barra con fuerza, extendiendo los brazos para volver a la posición inicial.
 </h3>
                 </div>
             </div>

@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pecho') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/6auqzzewE_8"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Siéntate en un banco plano con una mancuerna en cada mano.
-Levanta una mancuerna hasta que tu brazo esté completamente extendido por encima de tu hombro y la mancuerna esté justo por encima de tu cabeza.
-Baja lentamente la mancuerna hacia tu hombro mientras mantienes el brazo en línea recta.
-Repite con la otra mano y continúa alternando entre los brazos.</h3>
+                    <h3>1.- Siéntate en un banco plano con una mancuerna en cada mano.<br><br>
+2.- Levanta una mancuerna hasta que tu brazo esté completamente extendido por encima de tu hombro y la mancuerna esté justo por encima de tu cabeza.<br><br>
+3.- Baja lentamente la mancuerna hacia tu hombro mientras mantienes el brazo en línea recta.<br><br>
+4.- Repite con la otra mano y continúa alternando entre los brazos.</h3>
                 </div>
             </div>
         </div>

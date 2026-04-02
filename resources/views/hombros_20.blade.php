@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('hombros') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('hombros') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/jk7YrK79ciA"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,15 +33,15 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>El primer paso en la elevación frontal con mancuernas es el siguiente: toma las mancuernas (agarre prono), con la espalda completamente recta y las piernas abiertas a una altura aproximada de tus hombros. Levanta una mano y pásala por delante de tu cabeza; entonces, sentirás una tensión de la parte posterior del tríceps.
-No te olvides de hacer una pausa y de mover el brazo lentamente, tanto por delante de la cabeza, como cuando regresemos a la posición inicial; esto incrementará la fuerza realizada por los músculos del brazo.
-El mismo proceso de levantar el brazo y llevarlo hacia adelante de tu rostro, tensando el tríceps debe realizarse con el brazo opuesto. De esta forma, estaremos turnando ambos brazos. También puedes variar realizando dos y dos en cada brazo.</h3>
+                    <h3>1.- El primer paso en la elevación frontal con mancuernas es el siguiente: toma las mancuernas (agarre prono), con la espalda completamente recta y las piernas abiertas a una altura aproximada de tus hombros.<br><br>2.- Levanta una mano y pásala por delante de tu cabeza; entonces, sentirás una tensión de la parte posterior del tríceps.<br><br>
+3.- No te olvides de hacer una pausa y de mover el brazo lentamente, tanto por delante de la cabeza, como cuando regresemos a la posición inicial; esto incrementará la fuerza realizada por los músculos del brazo.<br><br>
+4.- El mismo proceso de levantar el brazo y llevarlo hacia adelante de tu rostro, tensando el tríceps debe realizarse con el brazo opuesto. De esta forma, estaremos turnando ambos brazos. También puedes variar realizando dos y dos en cada brazo.</h3>
                 </div>
             </div>
         </div>

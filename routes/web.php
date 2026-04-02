@@ -7,6 +7,8 @@ use App\Http\Controllers\MembresiaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProductoController;
+use Laravel\Socialite\Socialite;
+use App\Models\User;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -71,6 +73,10 @@ Route::get('/producto/eliminar/{id}', [ProductoController::class, 'eliminar'])->
 Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
+
+Route::get('inicio_sesion', function () {
+    return view('inicio_sesion');
+})->name('inicio_sesion');
 
 Route::get('/perfil', function () {
     return view('perfil');
@@ -731,3 +737,29 @@ Route::get('/piernas_19', function () {
 Route::get('/piernas_20', function () {
     return view('piernas_20');
 })->name('piernas_20');
+
+Route::get('/buscar', function () {
+    return view('buscar');
+})->name('buscar');
+
+// INICIO DE SESIÓN
+Route::get('/google-login', function(){
+    return Socialite::driver('google')->redirect();
+})->name('login.google');
+
+Route::get('/google-callback', function(){
+    $user = Socialite::driver('google')->user();
+    
+    $buscarUsuario = User::where('api_id', $user->id)->where('tipo', 'google')->first();
+
+    if($buscarUsuario){
+        //Ya tengo a ese usuario de google registrado
+        Auth::login($buscarUsuario);//Inicio sesión
+    }else{
+        //Ese usuario de google es nuevo, asi que lo registramos........
+        $nuevoUsuario = User::create(['name' => $user->name, 'email' => $user->email, 'tipo' => 'google', 'api_id' => $user->id, 'avatar' => $user->avatar]);
+        Auth::login($nuevoUsuario); //Inicio sesión
+    }
+    return redirect()->route('inicio');
+});
+// FIN DE INICIO DE SESIÓN

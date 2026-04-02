@@ -10,16 +10,11 @@
 <body>
 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
-<div class="container mt-4">
-    <div class="d-flex align-items-center gap-2 mx-auto" style="max-width: 1400px">
-        <div class="input-group">
-            <input type="text" class="form-control border-dark" placeholder="Buscar...">
-            <button class="btn btn-outline-secondary border-dark" type="button">
-              Buscar
-            </button>
-        </div>
+<div class="container mt-4 ">
+    <div class="mx-auto" style="max-width: 800px">
+        <x-buscador /> 
     </div>
-    <div class="mt-4">
+    <div class="mt-2">
         <a href="{{ route('inicio') }}#cartas">
             <i class="bi bi-box-arrow-in-left fs-1"></i>
         </a>

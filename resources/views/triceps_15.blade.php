@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('triceps') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('triceps') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/NGo-PL-57BA"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Colócate en posición de decúbito supino frente a la polea baja con los pies planos en el suelo.
-Agarra la barra de la polea con las manos en un agarre prono (palmas hacia abajo) y asegúrate de que tus brazos estén completamente extendidos.
-Mantén tus codos fijos mientras bajas la barra de la polea hacia tu cabeza, doblando los brazos en un ángulo de 90 grados.
-Extiende los brazos de nuevo hasta la posición inicial.</h3>
+                    <h3>1.- Colócate en posición de decúbito supino frente a la polea baja con los pies planos en el suelo.<br><br>
+2.- Agarra la barra de la polea con las manos en un agarre prono (palmas hacia abajo) y asegúrate de que tus brazos estén completamente extendidos.<br><br>
+3.- Mantén tus codos fijos mientras bajas la barra de la polea hacia tu cabeza, doblando los brazos en un ángulo de 90 grados.<br><br>
+4.- Extiende los brazos de nuevo hasta la posición inicial.</h3>
                 </div>
             </div>
         </div>

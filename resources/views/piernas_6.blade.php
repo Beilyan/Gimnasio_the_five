@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pierna') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pierna') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/7EiRTx3I0nY"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Colócate de pie frente a la máquina Smith con un pie adelante y otro detrás, separados por una distancia cómoda.
-Engancha la barra en la altura adecuada para tu altura y posiciónate debajo de ella para que quede apoyada en la parte superior de tu espalda.
-Dobla ambas rodillas hasta que la pierna trasera quede a unos pocos centímetros del suelo y la pierna delantera forme un ángulo de 90 grados. Mantén la espalda recta durante todo el ejercicio.
-Vuelve a la posición inicial lentamente y repite el movimiento durante 10 a 12 repeticiones antes de cambiar de pierna.</h3>
+                    <h3>1.- Colócate de pie frente a la máquina Smith con un pie adelante y otro detrás, separados por una distancia cómoda.<br><br>
+2.- Engancha la barra en la altura adecuada para tu altura y posiciónate debajo de ella para que quede apoyada en la parte superior de tu espalda.<br><br>
+3.- Dobla ambas rodillas hasta que la pierna trasera quede a unos pocos centímetros del suelo y la pierna delantera forme un ángulo de 90 grados. Mantén la espalda recta durante todo el ejercicio.<br><br>
+4.- Vuelve a la posición inicial lentamente y repite el movimiento durante 10 a 12 repeticiones antes de cambiar de pierna.</h3>
                 </div>
             </div>
         </div>

@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pierna') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pierna') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/nBqtb3xSIUc"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Toma una mancuerna con las manos como si fueras a hacer una sentadilla de copa y párate con los pies separados a la altura de los hombros.
-Lleva la mancuerna hacia el lado del cuerpo y baja en una posición de sentadilla lateral, asegurándote de mantener tu espalda recta y tu core bajo tensión.
-Vuelve a la posición de pie mientras levantas la mancuerna hacia el lado del cuerpo donde la sostienes.
-Repite el movimiento durante varias repeticiones y cambia de lado.</h3>
+                    <h3>1.- Toma una mancuerna con las manos como si fueras a hacer una sentadilla de copa y párate con los pies separados a la altura de los hombros.<br><br>
+2.- Lleva la mancuerna hacia el lado del cuerpo y baja en una posición de sentadilla lateral, asegurándote de mantener tu espalda recta y tu core bajo tensión.<br><br>
+3.- Vuelve a la posición de pie mientras levantas la mancuerna hacia el lado del cuerpo donde la sostienes.<br><br>
+4.- Repite el movimiento durante varias repeticiones y cambia de lado.</h3>
                 </div>
             </div>
         </div>
