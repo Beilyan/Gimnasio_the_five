@@ -18,12 +18,12 @@
             <i class="bi bi-box-arrow-in-left fs-1"></i>
         </a>
         <h1 class="text-3xl font-semibold text-gray-800">
-            Lista de Entrenadores
+            Lista de Horiarios
         </h1>
 
-        <a href="/entrenador/nueva">
+        <a href="/horario/nueva">
             <button class="bg-gray-800 text-white px-5 py-2 rounded-lg hover:bg-black hover:scale-105 transition duration-300 shadow-md">
-                Nueva Entrenador
+                Nuevo Horario
             </button>
         </a>
 
@@ -38,43 +38,33 @@
                     <th class="p-3 text-left">Nombres</th>
                     <th class="p-3 text-left">Apellido paterno</th>
                     <th class="p-3 text-left">Apellido materno</th>
-                    <th class="p-3 text-left">Facebook</th>
-                    <th class="p-3 text-left">Instagram</th>
-                    <th class="p-3 text-left">Otro</th>
-                    <th class="p-3 text-left">Descripción</th>
-                    <th class="p-3 text-left">Foto perfil</th>
-                    <th class="p-3 text-left">Foto portada</th>
+                    <th class="p-3 text-left">Dia</th>
+                    <th class="p-3 text-left">Hora Inicio</th>
+                    <th class="p-3 text-left">Hora Fin</th>
                     <th class="p-3 text-left">Acciones</th>
                 </tr>
             </thead>
 
             <tbody>
 
-                @foreach ($entrenador as $fila)
+                @foreach ($horario as $fila)
 
                 <tr class="border-b hover:bg-gray-50 hover:shadow-sm transition duration-200">
   
                     <td class="p-3">{{$fila->nom}}</td>
                     <td class="p-3">{{$fila->paterno}}</td>
                     <td class="p-3">{{$fila->materno}}</td>
-                    <td class="p-3">{{$fila->facebook}}</td>
-                    <td class="p-3">{{$fila->instagram}}</td>
-                    <td class="p-3">{{$fila->otro}}</td>
-                    <td class="p-3">{{$fila->descripcion}}</td>
-                    <td class="p-3">
-                        <img src="{{ asset('storage/'.$fila->img_perfil) }}" class="w-16 h-16 object-cover rounded">
-                    </td>
-                    <td class="p-3">
-                        <img src="{{ asset('storage/'.$fila->img_portada) }}" class="w-16 h-16 object-cover rounded">
-                    </td>
+                    <td class="p-3">{{$fila->dia}}</td>
+                    <td class="p-3">{{$fila->hora_inicio}}</td>
+                    <td class="p-3">{{$fila->hora_fin}}</td>
                     <td class="p-3 flex gap-2">
 
-                        <a href="{{route('entrenador.editar', $fila->entrenador_id)}}"
+                        <a href="{{route('horario.editar', $fila->horario_id)}}"
                         class="bg-gray-700 text-white px-3 py-1 rounded-md hover:bg-black hover:scale-105 transition duration-200 shadow">
                             Editar
                         </a>
 
-                        <a href="{{route('entrenador.eliminar', $fila->entrenador_id)}}"
+                        <a href="{{route('horario.eliminar', $fila->horario_id)}}"
                         class="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-800 hover:scale-105 transition duration-200 shadow">
                             Eliminar
                         </a>

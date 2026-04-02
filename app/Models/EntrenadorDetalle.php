@@ -17,4 +17,8 @@ class EntrenadorDetalle extends Model
         'img_perfil',
         'img_portada'
     ];
+
+    public function empleado(){
+        return $this->belongsTo(Empleado::class, 'empleado_id');
+    }
 }

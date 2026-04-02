@@ -67,8 +67,7 @@
                     rows="3"
                     placeholder="Especialidad en..."
                     oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"
-                    class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none">
-                </textarea>
+                    class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"></textarea>
             </div>
 
         <div class="md:col-span-2">

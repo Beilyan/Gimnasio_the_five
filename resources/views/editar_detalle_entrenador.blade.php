@@ -69,9 +69,7 @@
         <div class="md:col-span-2">
                 <label class="block text-gray-600 mb-1">Descripción profesional</label>
                 <textarea name="descripcion" rows="3" placeholder="Especialidad en..." oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"
-                    class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none">
-                    {{ $entrenador->descripcion }}
-                </textarea>
+                    class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none">{{ $entrenador->descripcion }}</textarea>
             </div>
 
         <div class="md:col-span-2">
