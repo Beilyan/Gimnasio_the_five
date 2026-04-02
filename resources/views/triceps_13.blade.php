@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('triceps') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('triceps') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/VlSS8Y3V6q4"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Acuéstate en un banco plano con los pies apoyados en el suelo y agarra una mancuerna con ambas manos en posición vertical sobre tu cabeza.
-Baja la mancuerna lentamente hacia atrás de tu cabeza, manteniendo los codos apuntando hacia el techo.
-Una vez que la mancuerna llegue a la altura de la cabeza, extiende los brazos hacia arriba para volver a la posición inicial.
-Repite este movimiento durante varias repeticiones, asegurándote de mantener los codos fijos durante todo el ejercicio.</h3>
+                    <h3>1.- Acuéstate en un banco plano con los pies apoyados en el suelo y agarra una mancuerna con ambas manos en posición vertical sobre tu cabeza.<br><br>
+2.- Baja la mancuerna lentamente hacia atrás de tu cabeza, manteniendo los codos apuntando hacia el techo.<br><br>
+3.- Una vez que la mancuerna llegue a la altura de la cabeza, extiende los brazos hacia arriba para volver a la posición inicial.<br><br>
+4.- Repite este movimiento durante varias repeticiones, asegurándote de mantener los codos fijos durante todo el ejercicio.</h3>
                 </div>
             </div>
         </div>

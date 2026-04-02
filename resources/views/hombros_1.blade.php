@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('hombros') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('hombros') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/KRO4Hzq6VUo"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Comienza ajustando la altura del cable de la polea a la altura de tu codo.
-Párate de lado, con el brazo más alejado de la polea sosteniendo la manija con el codo doblado a 90 grados.
-Mantén el codo pegado al costado del cuerpo y rota el brazo hacia adentro, cruzando el cuerpo y acercando la manija hacia tu torso. Asegúrate de que el hombro permanezca estable durante todo el movimiento.
-Regresa a la posición inicial lentamente y repite el movimiento para completar el conjunto de repeticiones. Luego cambia de lado y repite con el otro brazo.</h3>
+                    <h3>1.- Comienza ajustando la altura del cable de la polea a la altura de tu codo.<br><br>
+2.- Párate de lado, con el brazo más alejado de la polea sosteniendo la manija con el codo doblado a 90 grados.<br><br>
+3.- Mantén el codo pegado al costado del cuerpo y rota el brazo hacia adentro, cruzando el cuerpo y acercando la manija hacia tu torso. Asegúrate de que el hombro permanezca estable durante todo el movimiento.<br><br>
+4.- Regresa a la posición inicial lentamente y repite el movimiento para completar el conjunto de repeticiones. Luego cambia de lado y repite con el otro brazo.</h3>
                 </div>
             </div>
         </div>

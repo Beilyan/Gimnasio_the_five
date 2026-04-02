@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('espalda') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('espalda') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/qsuX-k5-v2I"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Coloca una barra en un bastidor y ajústala a la altura de tu cintura.
-Colócate debajo de la barra y agárrala con las manos en un agarre supino (palmas hacia ti).
-Levanta tu cuerpo hacia la barra manteniendo los codos cerca de tu cuerpo y las piernas extendidas.
-Baja tu cuerpo lentamente hasta que tus brazos estén completamente extendidos.</h3>
+                    <h3>1.- Coloca una barra en un bastidor y ajústala a la altura de tu cintura.<br><br>
+2.- Colócate debajo de la barra y agárrala con las manos en un agarre supino (palmas hacia ti).<br><br>
+3.- Levanta tu cuerpo hacia la barra manteniendo los codos cerca de tu cuerpo y las piernas extendidas.<br><br>
+4.- Baja tu cuerpo lentamente hasta que tus brazos estén completamente extendidos.</h3>
                 </div>
             </div>
         </div>

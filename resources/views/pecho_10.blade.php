@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pecho') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/bAh7-dPvd9A"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Coloca un balón medicinal en el suelo y ponte en posición de flexión con las manos sobre el balón.
-Mantén las manos juntas debajo del pecho y aprieta los codos hacia los lados.
-Baja lentamente tu cuerpo hacia el balón mientras mantienes tu núcleo apretado y tu espalda recta.
-Empuja hacia arriba y vuelve a la posición inicial.</h3>
+                    <h3>1.- Coloca un balón medicinal en el suelo y ponte en posición de flexión con las manos sobre el balón.<br><br>
+2.- Mantén las manos juntas debajo del pecho y aprieta los codos hacia los lados.<br><br>
+3.- Baja lentamente tu cuerpo hacia el balón mientras mantienes tu núcleo apretado y tu espalda recta.<br><br>
+4.- Empuja hacia arriba y vuelve a la posición inicial.</h3>
                 </div>
             </div>
         </div>

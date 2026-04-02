@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('triceps') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('triceps') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/CZN7y19iXZQ"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Comienza de pie frente a una máquina de poleas con la polea ajustada a la altura de tu hombro. Agarra la cuerda con una mano en un agarre neutral.
-Manteniendo el codo cerca de tu cuerpo, lleva tu antebrazo hacia atrás, asegurándote de mantener el brazo estacionario a lo largo del movimiento.
-Mantén la contracción en el tríceps y extiende tu brazo hacia abajo hasta que esté completamente extendido, manteniendo siempre el control del peso.
-Vuelve a la posición inicial lentamente, manteniendo la tensión en el tríceps durante todo el movimiento.</h3>
+                    <h3>1.- Comienza de pie frente a una máquina de poleas con la polea ajustada a la altura de tu hombro. Agarra la cuerda con una mano en un agarre neutral.<br><br>
+2.- Manteniendo el codo cerca de tu cuerpo, lleva tu antebrazo hacia atrás, asegurándote de mantener el brazo estacionario a lo largo del movimiento.<br><br>
+3.- Mantén la contracción en el tríceps y extiende tu brazo hacia abajo hasta que esté completamente extendido, manteniendo siempre el control del peso.<br><br>
+4.- Vuelve a la posición inicial lentamente, manteniendo la tensión en el tríceps durante todo el movimiento.</h3>
                 </div>
             </div>
         </div>

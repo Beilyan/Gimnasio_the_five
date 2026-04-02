@@ -48,12 +48,9 @@
 </div>
 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
-<div class="container mt-4">
-    <div class="input-group mx-auto" style="max-width: 500px">
-        <input type="text" class="form-control border-dark" placeholder="Buscar...">
-        <button class="btn btn-outline-secondary border-dark" type="button">
-            Buscar
-        </button>
+<div class="container mt-4 ">
+    <div class="mx-auto" style="max-width: 800px">
+        <x-buscador /> 
     </div>
 </div>
 {{-- FIN DE BARRA DE BUSQUEDA --}}

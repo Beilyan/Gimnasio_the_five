@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pecho') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pecho') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/G2j_lJf6ljk"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Siéntate en un banco inclinado con una pesa en cada mano y coloca los pies firmemente en el suelo.
-Inclina tu cuerpo hacia atrás, manteniendo las pesas sobre tu pecho con los codos ligeramente doblados.
-Luego, presiona las pesas hacia arriba, asegurándote de juntarlas y apretarlas en el punto más alto del movimiento.
-Baja las pesas lentamente hasta que los codos estén ligeramente por debajo de los hombros y repite el movimiento.</h3>
+                    <h3>1.- Siéntate en un banco inclinado con una pesa en cada mano y coloca los pies firmemente en el suelo.<br><br>
+2.- Inclina tu cuerpo hacia atrás, manteniendo las pesas sobre tu pecho con los codos ligeramente doblados.<br><br>
+3.- Luego, presiona las pesas hacia arriba, asegurándote de juntarlas y apretarlas en el punto más alto del movimiento.<br><br>
+4.- Baja las pesas lentamente hasta que los codos estén ligeramente por debajo de los hombros y repite el movimiento.</h3>
                 </div>
             </div>
         </div>

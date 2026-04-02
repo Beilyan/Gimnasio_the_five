@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pierna') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pierna') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/ZgK3zsJP1TU"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Colócate debajo de la barra y ajústala a la altura de tus hombros. Ponte debajo de la barra y apoya tus hombros debajo de ella. Toma la barra con las manos y levántala, alejándola de la máquina Smith.
-Separa los pies a la altura de los hombros y apunta los dedos de los pies ligeramente hacia afuera. Mantén la columna vertebral recta y el abdomen apretado.
-Desplaza tus caderas hacia atrás y dobla las rodillas para bajar el cuerpo. Mantén la cabeza hacia arriba y la espalda recta. Baja hasta que tus muslos estén paralelos al suelo.
-Levántate lentamente, estirando las piernas y volviendo a la posición inicial. Repite el movimiento durante varias repeticiones.</h3>
+                    <h3>1.- Colócate debajo de la barra y ajústala a la altura de tus hombros. Ponte debajo de la barra y apoya tus hombros debajo de ella. Toma la barra con las manos y levántala, alejándola de la máquina Smith.<br><br>
+2.- Separa los pies a la altura de los hombros y apunta los dedos de los pies ligeramente hacia afuera. Mantén la columna vertebral recta y el abdomen apretado.<br><br>
+3.- Desplaza tus caderas hacia atrás y dobla las rodillas para bajar el cuerpo. Mantén la cabeza hacia arriba y la espalda recta. Baja hasta que tus muslos estén paralelos al suelo.<br><br>
+4.- Levántate lentamente, estirando las piernas y volviendo a la posición inicial. Repite el movimiento durante varias repeticiones.</h3>
                 </div>
             </div>
         </div>
