@@ -11,13 +11,18 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('hombros') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('hombros') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
-    </div>
 
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/3atotErHM00"></iframe>
+            </div>
+        </div>  
+        
+    </div>
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
@@ -27,16 +32,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo.
-Sostén una mancuerna con la mano derecha y levanta el brazo hasta que esté paralelo al suelo, con el codo doblado a 90 grados y el antebrazo hacia afuera.
-Lentamente, gira la mano hacia afuera, alejándote del cuerpo, hasta que sientas un estiramiento en los músculos del hombro.
-Mantén la posición durante unos segundos y luego regresa lentamente a la posición inicial. Repite con el otro brazo.</h3>
+                    <h3>1.- Siéntate en una silla o banco con la espalda recta y los pies apoyados en el suelo.<br><br>
+2.- Sostén una mancuerna con la mano derecha y levanta el brazo hasta que esté paralelo al suelo, con el codo doblado a 90 grados y el antebrazo hacia afuera.<br><br>
+3.- Lentamente, gira la mano hacia afuera, alejándote del cuerpo, hasta que sientas un estiramiento en los músculos del hombro.<br><br>
+4.- Mantén la posición durante unos segundos y luego regresa lentamente a la posición inicial. Repite con el otro brazo.</h3>
                 </div>
             </div>
         </div>

@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('hombros') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('hombros') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/M4ysdEptZp4"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Para realizar este ejercicio, adopta un agarre pronunciado, ancho de hombros en la barra desde una posición de pie. Permita que sus brazos cuelguen directamente hasta la mitad del muslo con los codos extendidos. Tu cabeza debe mirar hacia adelante, con tus hombros hacia atrás y tu pecho hacia arriba. Mantenga una columna neutral y contraiga sus abdominales para proporcionar soporte central. Desde la posición inicial, comience el movimiento flexionando el hombro, levantando el peso directamente frente a usted. Mantenga los codos extendidos y la muñeca neutral durante todo el movimiento.
-Continúe el movimiento hacia arriba de los brazos hasta que la barra esté justo por encima de la altura del hombro.
-En la parte superior del movimiento, haga una pausa breve y luego regrese lentamente a la posición inicial.
-Repita el movimiento de acuerdo a las repeticiones que indique su plan de entrenamiento.</h3>
+                    <h3>1.- Para realizar este ejercicio, adopta un agarre pronunciado, ancho de hombros en la barra desde una posición de pie. <br><br>2.- Permita que sus brazos cuelguen directamente hasta la mitad del muslo con los codos extendidos. Tu cabeza debe mirar hacia adelante, con tus hombros hacia atrás y tu pecho hacia arriba.<br><br>3.- Mantenga una columna neutral y contraiga sus abdominales para proporcionar soporte central. <br><br>4.- Desde la posición inicial, comience el movimiento flexionando el hombro, levantando el peso directamente frente a usted. <br><br>5.- Mantenga los codos extendidos y la muñeca neutral durante todo el movimiento.<br><br>
+6.- Continúe el movimiento hacia arriba de los brazos hasta que la barra esté justo por encima de la altura del hombro.<br><br>
+7.- En la parte superior del movimiento, haga una pausa breve y luego regrese lentamente a la posición inicial.<br><br>
+8.- Repita el movimiento de acuerdo a las repeticiones que indique su plan de entrenamiento.</h3>
                 </div>
             </div>
         </div>

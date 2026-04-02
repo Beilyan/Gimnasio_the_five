@@ -11,13 +11,18 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('triceps') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('triceps') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
-    </div>
 
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/1XBpraB9hIs"></iframe>
+            </div>
+        </div>  
+        
+    </div>
     {{-- INFORMACIÓN PERFIL --}}
     <div class="profile-info bg-white p-4 shadow">
             <div class="ms-4 mt-3 mt-md-0 text-center">
@@ -27,16 +32,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Comienza parándote frente a la máquina de poleas con agarre supino, y ajusta la altura de la polea para que esté a la altura de tu cintura.
-Toma el agarre con una mano y párate con el brazo extendido a tu lado, con la palma de la mano hacia abajo.
-Flexiona tu codo y lleva tu antebrazo hacia atrás, asegurándote de mantener tu codo pegado al cuerpo.
-Extiende tu brazo de vuelta a la posición inicial, manteniendo siempre el control del peso.</h3>
+                    <h3>1.- Comienza parándote frente a la máquina de poleas con agarre supino, y ajusta la altura de la polea para que esté a la altura de tu cintura.<br><br>
+2.- Toma el agarre con una mano y párate con el brazo extendido a tu lado, con la palma de la mano hacia abajo.<br><br>
+3.- Flexiona tu codo y lleva tu antebrazo hacia atrás, asegurándote de mantener tu codo pegado al cuerpo.<br><br>
+4.- Extiende tu brazo de vuelta a la posición inicial, manteniendo siempre el control del peso.</h3>
                 </div>
             </div>
         </div>

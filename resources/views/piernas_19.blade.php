@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pierna') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pierna') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/dJcCdRH_2i8"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,13 +33,13 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Párese en la máquina ajustando correctamente los hombros bajo las almohadillas, con la espalda completamente apoyada la mirada hacia el frente. Los pies deben apoyarse planos centrados en la plataforma a una distancia igual a la de los hombros. Baje con un movimiento de sentadilla flexionando las caderas y las rodillas hasta que los muslos formen una paralela con la plataforma. Recuerde inhalar durante el movimiento. Sostenga un momento la posición. Regrese a la posición inicial, empujando con los talones mientras exhala. Evite trancar las rodillas al llegar arriba. Repita hasta completar una serie.</h3>
+                    <h3>1.- Párese en la máquina ajustando correctamente los hombros bajo las almohadillas, con la espalda completamente apoyada la mirada hacia el frente.<br><br>2.- Los pies deben apoyarse planos centrados en la plataforma a una distancia igual a la de los hombros. <br><br>3.- Baje con un movimiento de sentadilla flexionando las caderas y las rodillas hasta que los muslos formen una paralela con la plataforma. <br><br>4.- Recuerde inhalar durante el movimiento. Sostenga un momento la posición. Regrese a la posición inicial, empujando con los talones mientras exhala.<br><br>5.- Evite trancar las rodillas al llegar arriba. Repita hasta completar una serie.</h3>
                 </div>
             </div>
         </div>

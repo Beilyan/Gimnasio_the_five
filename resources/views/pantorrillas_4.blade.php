@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pantorrillas') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pantorrillas') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/fKt3Q0peC0Y"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Empieza de pie con los pies al ancho de los hombros y una mancuerna en cada mano a los costados de tus muslos.
-Levanta lentamente el talón de la pierna derecha hasta que estés de pie en la punta de tu pie.
-Pausa en la parte superior del movimiento durante 1-2 segundos y luego baja el talón lentamente de vuelta al suelo.
-Repite el movimiento en la pierna izquierda y alterna hasta completar el número deseado de repeticiones.</h3>
+                    <h3>1.- Empieza de pie con los pies al ancho de los hombros y una mancuerna en cada mano a los costados de tus muslos.<br><br>
+2.- Levanta lentamente el talón de la pierna derecha hasta que estés de pie en la punta de tu pie.<br><br>
+3.- Pausa en la parte superior del movimiento durante 1-2 segundos y luego baja el talón lentamente de vuelta al suelo.<br><br>
+4.- Repite el movimiento en la pierna izquierda y alterna hasta completar el número deseado de repeticiones.</h3>
                 </div>
             </div>
         </div>

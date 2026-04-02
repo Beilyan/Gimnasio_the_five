@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('biceps') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('biceps') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/NkL6KIYDpb0"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Colócate en una máquina con la que puedas sujetar ambos mangos. La posición inicial es tomando los dos mangos con las palmas mirando hacia arriba. Asimismo, debes tener la espalda erguida y el pecho hacia afuera para evitar lesiones.
-Exhala mientras vas flexionando los codos hasta tus hombros para levantar el peso.
-Inhala mientras vuelves a la posición inicial lentamente.
-Repite el ejercicio según tu rutina. Puedes hacer la variante a un solo brazo alternado.</h3>
+                    <h3>1.- Colócate en una máquina con la que puedas sujetar ambos mangos. La posición inicial es tomando los dos mangos con las palmas mirando hacia arriba. Asimismo, debes tener la espalda erguida y el pecho hacia afuera para evitar lesiones.<br><br>
+2.- Exhala mientras vas flexionando los codos hasta tus hombros para levantar el peso.<br><br>
+3.- Inhala mientras vuelves a la posición inicial lentamente.<br><br>
+4.- Repite el ejercicio según tu rutina. Puedes hacer la variante a un solo brazo alternado.</h3>
                 </div>
             </div>
         </div>

@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('pierna') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('pierna') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/sw4MzpC8l58"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,16 +33,16 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Empieza parándote con los pies separados al ancho de tus hombros, con una mancuerna en cada mano y los brazos a los costados.
-Da un gran paso hacia adelante con una pierna, manteniendo el pie trasero en su lugar y doblando ambas rodillas para bajar en una sentadilla. Asegúrate de que ambas rodillas estén dobladas a un ángulo de 90 grados.
-Empuja a través del pie delantero para volver a la posición inicial, y luego repite el movimiento con la otra pierna hacia adelante.
-Continúa alternando entre piernas para realizar el número deseado de repeticiones.
+                    <h3>1.- Empieza parándote con los pies separados al ancho de tus hombros, con una mancuerna en cada mano y los brazos a los costados.<br><br>
+2.- Da un gran paso hacia adelante con una pierna, manteniendo el pie trasero en su lugar y doblando ambas rodillas para bajar en una sentadilla. Asegúrate de que ambas rodillas estén dobladas a un ángulo de 90 grados.<br><br>
+3.- Empuja a través del pie delantero para volver a la posición inicial, y luego repite el movimiento con la otra pierna hacia adelante.<br><br>
+4.- Continúa alternando entre piernas para realizar el número deseado de repeticiones.
 </h3>
                 </div>
             </div>

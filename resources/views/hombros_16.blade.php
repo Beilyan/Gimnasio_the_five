@@ -11,11 +11,17 @@
 
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
-    <div class="profile-cover shadow">
-        <a href="{{ route('hombros') }}">
+    <div class="profile-cover shadow position-relative mt-3">
+        <a href="{{ route('hombros') }}" class="position-absolute top-0 start-0 m-3 text-dark fs-3">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/.webp') }}" class="cover-img" alt="Portada">
+
+        <div style="max-width: 530px; margin: auto;" class="mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/LLgkANwIKzk"></iframe>
+            </div>
+        </div>  
+        
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -27,14 +33,14 @@
 {{-- FIN DE FOTOS --}}
 
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8 profile-info">
+<div class="container shadow-lg p-4 rounded bg-warning mt-5 col-8 profile-info">
     <h1 class="fw-bold mb-2">Información del ejercicio</h1>
     <div class="row g-3">
         <div class="col-md-12">
-            <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
+            <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
-                    <h3>Siéntese en el banco de la máquina con el torso recto. Tome cada palanca con un agarre horizontal, de forma tal que este agarre se encuentre a la altura de los hombros. Y resulte más sencillo para ejecutar el ejercicio. Realice la posición inicial a la perfección.
-Proceda a separar los brazos y extenderlos, de forma que los codos queden a la altura de los hombros. Luego regrese a la posición inicial. Repita las veces que indique su plan de entrenamiento.</h3>
+                    <h3>1.- Siéntese en el banco de la máquina con el torso recto. <br><br>2.- Tome cada palanca con un agarre horizontal, de forma tal que este agarre se encuentre a la altura de los hombros. Y resulte más sencillo para ejecutar el ejercicio. Realice la posición inicial a la perfección.<br><br>
+3.- Proceda a separar los brazos y extenderlos, de forma que los codos queden a la altura de los hombros. Luego regrese a la posición inicial. Repita las veces que indique su plan de entrenamiento.</h3>
                 </div>
             </div>
         </div>
