@@ -9,6 +9,8 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProductoController;
 use Laravel\Socialite\Socialite;
 use App\Models\User;
+use App\Http\Controllers\EspecialidadController;
+use App\Http\Controllers\EntrenadorDetalleController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -67,6 +69,24 @@ Route::get('/producto/lista', [ProductoController::class, 'mostrar'])->name('pro
 Route::get('/producto/editar/{id}', [ProductoController::class, 'editar'])->name('producto.editar');
 Route::post('/producto/actualizar', [ProductoController::class, 'actualizar'])->name('producto.actualizar');
 Route::get('/producto/eliminar/{id}', [ProductoController::class, 'eliminar'])->name('producto.eliminar');
+
+//especialidad
+Route::get('/especialidad/nueva', function () {
+    return view('formulario_especialidad');
+});
+Route::post('/especialidad/guardar', [EspecialidadController::class, 'guardar'])->name('especialidad.guardar');
+Route::get('/especialidad/lista', [EspecialidadController::class, 'mostrar'])->name('especialidad.mostrar');
+Route::get('/especialidad/editar/{id}', [EspecialidadController::class, 'editar'])->name('especialidad.editar');
+Route::post('/especialidad/actualizar', [EspecialidadController::class, 'actualizar'])->name('especialidad.actualizar');
+Route::get('/especialidad/eliminar/{id}', [EspecialidadController::class, 'eliminar'])->name('especialidad.eliminar');
+
+//entrenador
+Route::get('/entrenador/nueva', [EntrenadorDetalleController::class, 'nueva'])->name('entrenador.nueva');
+Route::post('/entrenador/guardar', [EntrenadorDetalleController::class, 'guardar'])->name('entrenador.guardar');
+Route::get('/entrenador/lista', [EntrenadorDetalleController::class, 'mostrar'])->name('entrenador.mostrar');
+Route::get('/entrenador/editar/{id}', [EntrenadorDetalleController::class, 'editar'])->name('entrenador.editar');
+Route::post('/entrenador/actualizar', [EntrenadorDetalleController::class, 'actualizar'])->name('entrenador.actualizar');
+Route::get('/entrenador/eliminar/{id}', [EntrenadorDetalleController::class, 'eliminar'])->name('entrenador.eliminar');
 
 // LEONEL
 // RUTAS DE BARRA DE NEVEGACIÓN
