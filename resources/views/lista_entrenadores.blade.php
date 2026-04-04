@@ -22,98 +22,25 @@
 
 {{-- INICIO DE CARTAS --}}
 <div class="container mt-5 contenedor-cards">
-  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="row row-cols-2 row-cols-md-4 g-4">
 
-  
-  <div class="col-6">
-    <div class="card">
-      <a href="{{ route('entrenador') }}">
-      <img src="{{ asset('img/ent1.avif') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Eduardo</h3>
+    @foreach ($entrenador as $item)
+    <div class="col">
+      <div class="card h-100 shadow-10 border-0">
+        <a href="{{ route('entrenador.perfil', $item->entrenador_id) }}">
+          <img src="{{ asset('storage/' . $item->img_perfil) }}" 
+               class="card-img-top" 
+               alt="Entrenador {{ $item->nom }}"
+               style="height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+        </a>
+        <div class="card-body text-center">
+          <h3 class="h5 fw-bold">{{ $item->nom }} {{ $item->paterno }}</h3>
+        </div>
       </div>
     </div>
-  </div>
+    @endforeach
 
-  <div class="col-6">
-    <div class="card ">
-      <a href="">
-      <img src="{{ asset('img/ent2.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Leonel</h3>
-      </div>
-    </div>
   </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/ent3.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Beilyan</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/ent4.avif') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Juan</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/ent5.avif') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Frida</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/ent6.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Cristian</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/ent1.avif') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Emilio</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/ent2.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Raul</h3>
-      </div>
-    </div>
-  </div>
-  
-</div>
 </div>
 {{-- FIN DE CARTAS --}}
 
@@ -133,14 +60,14 @@
             <span>Mi Perfil</span>
         </a>
 
-        <a href="{{ route('lista_entrenadores') }}"
-           class="nav-item text-center {{ request()->routeIs('lista_entrenadores') ? 'active' : '' }}">
+        <a href="{{ route('entrenador.user') }}"
+           class="nav-item text-center {{ request()->routeIs('entrenador.user') ? 'active' : '' }}">
             <i class="bi bi-person-check"></i>
             <span>Entrenador</span>
         </a>
 
-        <a href="{{ route('tienda') }}"
-           class="nav-item text-center {{ request()->routeIs('tienda') ? 'active' : '' }}">
+        <a href="{{ route('producto.user') }}"
+           class="nav-item text-center {{ request()->routeIs('producto.user') ? 'active' : '' }}">
             <i class="bi bi-bag"></i>
             <span>Tienda</span>
         </a>

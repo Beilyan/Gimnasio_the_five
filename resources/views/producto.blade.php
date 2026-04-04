@@ -12,14 +12,16 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('tienda') }}">
+        <a href="{{ route('producto.user') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/pro1.jpeg') }}" class="cover-img" alt="Portada">
+        <img src="{{ asset('storage/' . $producto->img_portada) }}" class="cover-img" alt="Portada">
         
+        <a href="{{ route('producto.mostrar') }}">
         <button class="btn btn-light btn-sm edit-cover shadow">
             <i class="bi bi-camera"></i> Editar portada
         </button>
+        </a>
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -29,16 +31,16 @@
 
             {{-- FOTO PERFIL --}}
             <div class="profile-photo">
-                <img src="{{ asset('img/pro1.jpeg') }}" 
+                <img src="{{ asset('storage/' . $producto->img_perfil) }}" 
                      class="rounded-circle profile-img shadow" 
                      alt="Perfil">
 
-                <button class="btn btn-light btn-sm change-photo shadow"><i class="bi bi-camera"></i></button>
+                <a href="{{ route('producto.mostrar') }}"><button class="btn btn-light btn-sm change-photo shadow"><i class="bi bi-camera"></i></button></a>
             </div>
 
         {{-- NOMBRE Y BADGE --}}
             <div class="ms-4 mt-3 mt-md-0">
-                <h2 class="fw-bold mb-2">Proteína Whey</h2>
+                <h2 class="fw-bold mb-2">{{ $producto->nom_producto }}</h2>
             </div>
         </div>
 
@@ -58,12 +60,9 @@
             <div class="bg-warning text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
                     <h1 class="mb-1">Precio:</h1>
-                    <h3>$450</h3>
+                    <h3>${{ $producto->precio_venta }}</h3>
                     <h1 class="mb-1">Descripción:</h1>
-                    <h3>La proteína de suero es la fuente definitiva de proteína. Es la proteína de más alta calidad. La proteína de suero es una rica fuente de aminoácidos de cadena ramificada (BCAAs) y, de todas las proteínas, puede ser absorbida más rápidamente por el cuerpo.
-                    La proteína de suero es uno de los 2 tipos de proteínas derivadas de la leche (el otro es la proteína de caseína). Cuando se elabora queso a partir de leche, el suero se separa de la caseína y se recoge. El suero contiene solo un 3% de proteína de suero.
-                    Con la ayuda de métodos de filtración elaborados, se eliminan la lactosa (azúcar de la leche) y la grasa de la leche, y se retira el agua. El resultado final es proteína de suero en diferentes calidades y con diferentes contenidos de proteína.
-                    La proteína de suero es fácilmente digestible y tiene un valor biológico de 104, lo que significa que puede convertirse directamente en las propias proteínas del cuerpo humano. Los primeros aminoácidos entran en la sangre apenas 30 minutos después de la ingestión.</h3>
+                    <h3>{{ $producto->descripcion }}</h3>
                 </div>
             </div>
         </div>

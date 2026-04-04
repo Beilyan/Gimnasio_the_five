@@ -54,9 +54,20 @@
         </div>
 
         <div>
-            <label class="block text-gray-600 mb-1">Imagen</label>
-            <input type="file" name="img"
+            <label class="block text-gray-600 mb-1">Foto perfil</label>
+            <input type="file" name="img_perfil"
             class="w-full border border-gray-300 rounded-lg p-2 transition hover:shadow-md">
+        </div>
+        <div>
+            <label class="block text-gray-600 mb-1">Foto portada</label>
+            <input type="file" name="img_portada"
+            class="w-full border border-gray-300 rounded-lg p-2 transition hover:shadow-md">
+        </div>
+        
+        <div class="md:col-span-2">
+            <label class="block text-gray-600 mb-1">Descripción</label>
+            <input type="text" name="descripcion" placeholder="Ej: La proteína de suero es la fuente definitiva de proteína...." 
+            class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50">
         </div>
 
         <div class="md:col-span-2">

@@ -68,9 +68,11 @@ Route::get('/empleado/eliminar/{id}', [EmpleadoController::class, 'eliminar'])->
 Route::get('/producto/nueva', [ProductoController::class, 'nueva'])->name('producto.nueva');
 Route::post('/producto/guardar', [ProductoController::class, 'guardar'])->name('producto.guardar');
 Route::get('/producto/lista', [ProductoController::class, 'mostrar'])->name('producto.mostrar');
+Route::get('/tienda', [ProductoController::class, 'mostrarUser'])->name('producto.user');
 Route::get('/producto/editar/{id}', [ProductoController::class, 'editar'])->name('producto.editar');
 Route::post('/producto/actualizar', [ProductoController::class, 'actualizar'])->name('producto.actualizar');
 Route::get('/producto/eliminar/{id}', [ProductoController::class, 'eliminar'])->name('producto.eliminar');
+Route::get('/producto/{id}', [ProductoController::class, 'verProducto'])->name('producto.producto');
 
 //especialidad
 Route::get('/especialidad/nueva', function () {
@@ -86,9 +88,11 @@ Route::get('/especialidad/eliminar/{id}', [EspecialidadController::class, 'elimi
 Route::get('/entrenador/nueva', [EntrenadorDetalleController::class, 'nueva'])->name('entrenador.nueva');
 Route::post('/entrenador/guardar', [EntrenadorDetalleController::class, 'guardar'])->name('entrenador.guardar');
 Route::get('/entrenador/lista', [EntrenadorDetalleController::class, 'mostrar'])->name('entrenador.mostrar');
+Route::get('/lista_entrenadores', [EntrenadorDetalleController::class, 'mostrarUser'])->name('entrenador.user');
 Route::get('/entrenador/editar/{id}', [EntrenadorDetalleController::class, 'editar'])->name('entrenador.editar');
 Route::post('/entrenador/actualizar', [EntrenadorDetalleController::class, 'actualizar'])->name('entrenador.actualizar');
 Route::get('/entrenador/eliminar/{id}', [EntrenadorDetalleController::class, 'eliminar'])->name('entrenador.eliminar');
+Route::get('/entrenador/{id}', [EntrenadorDetalleController::class, 'verPerfil'])->name('entrenador.perfil');
 
 //horario
 Route::get('/horario/nueva', [HorarioController::class, 'nueva'])->name('horario.nueva');
@@ -117,14 +121,6 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
 
-Route::get('/lista_entrenadores', function () {
-    return view('lista_entrenadores');
-})->name('lista_entrenadores');
-
-Route::get('/tienda', function () {
-    return view('tienda');
-})->name('tienda');
-
 Route::get('/operaciones', function () {
     return view('operaciones');
 })->name('operaciones');
@@ -138,6 +134,10 @@ Route::get('/entrenador', function () {
 Route::get('/producto', function () {
     return view('producto');
 })->name('producto');
+
+Route::get('/carrito', function () {
+    return view('carrito');
+})->name('carrito');
 
 // RUTA DE TIPOS EJERCICIOS
 //PECHO
