@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('stock');
             $table->decimal('precio_compra', 6, 2);
             $table->decimal('precio_venta', 6, 2);
+            $table->text('descripcion')->nullable();
             $table->unsignedBigInteger('proveedor_id');
             $table->char('estatus', 1)->default('1');       
             $table->timestamps();

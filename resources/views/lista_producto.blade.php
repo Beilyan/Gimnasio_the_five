@@ -41,7 +41,9 @@
                     <th class="p-3 text-left">Stock</th>
                     <th class="p-3 text-left">Precio de compra</th>
                     <th class="p-3 text-left">Precio de venta</th>
-                    <th class="p-3 text-left">Imagen</th>
+                    <th class="p-3 text-left">Foto perfil</th>
+                    <th class="p-3 text-left">Foto portada</th>
+                    <th class="p-3 text-left">Descripción</th>
                     <th class="p-3 text-left">Proveedor</th>
                     <th class="p-3 text-left">Acciones</th>
                 </tr>
@@ -60,9 +62,13 @@
                     <td class="p-3">{{$fila->precio_venta}}</td>
 
                     <td class="p-3">
-                        <img src="{{ asset('storage/'.$fila->img) }}" class="w-16 h-16 object-cover rounded">
+                        <img src="{{ asset('storage/'.$fila->img_perfil) }}" class="w-16 h-16 object-cover rounded">
+                    </td>
+                    <td class="p-3">
+                        <img src="{{ asset('storage/'.$fila->img_portada) }}" class="w-16 h-16 object-cover rounded">
                     </td>
 
+                    <td class="p-3">{{$fila->descripcion}}</td>
                     <td class="p-3">{{$fila->nom}}</td>
 
                     <td class="p-3 flex gap-2">

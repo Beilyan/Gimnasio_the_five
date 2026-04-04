@@ -18,7 +18,7 @@
               Buscar
             </button>
         </div>
-        <a href="">
+        <a href="{{ asset('carrito') }}">
         <button class="btn btn-warning">
             <i class="bi bi-cart-fill"></i>
         </button>
@@ -29,106 +29,26 @@
 
 {{-- INICIO DE CARTAS --}}
 <div class="container mt-5 contenedor-cards">
-  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="row row-cols-2 row-cols-md-4 g-4">
 
-  
-  <div class="col-6">
-    <div class="card">
-      <a href="{{ route('producto') }}">
-      <img src="{{ asset('img/pro1.jpeg') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Proteína Whey</h3>
-        <h4>$$450</h4>
+    @foreach ($producto as $item)
+    <div class="col">
+      <div class="card h-100 shadow-10 border-0">
+        <a href="{{ route('producto.producto', $item->producto_id) }}">
+          <img src="{{ asset('storage/' . $item->img_perfil) }}" 
+               class="card-img-top" 
+               alt="Producto {{ $item->nom }}"
+               style="height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+        </a>
+        <div class="card-body text-center">
+          <h3 class="h5 fw-bold"> {{ $item->nom_producto }} </h3>
+          <h3 class="h5 fw-bold">${{ $item->precio_venta }} </h3>
+        </div>
       </div>
     </div>
-  </div>
+    @endforeach
 
-  <div class="col-6">
-    <div class="card ">
-      <a href="">
-      <img src="{{ asset('img/pro2.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Creatina</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
   </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/pro3.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Pre-entrenamiento</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/pro4.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Glutamina</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/pro1.jpeg') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Proteína Whey</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/pro2.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Creatina</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/pro3.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Pre-entrenamiento</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="">
-      <img src="{{ asset('img/pro4.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Glutamina</h3>
-        <h4>$$450</h4>
-      </div>
-    </div>
-  </div>
-  
-</div>
 </div>
 {{-- FIN DE CARTAS --}}
 
@@ -148,14 +68,14 @@
             <span>Mi Perfil</span>
         </a>
 
-        <a href="{{ route('lista_entrenadores') }}"
-           class="nav-item text-center {{ request()->routeIs('lista_entrenadores') ? 'active' : '' }}">
+        <a href="{{ route('entrenador.user') }}"
+           class="nav-item text-center {{ request()->routeIs('entrenador.user') ? 'active' : '' }}">
             <i class="bi bi-person-check"></i>
             <span>Entrenador</span>
         </a>
 
-        <a href="{{ route('tienda') }}"
-           class="nav-item text-center {{ request()->routeIs('tienda') ? 'active' : '' }}">
+        <a href="{{ route('producto.user') }}"
+           class="nav-item text-center {{ request()->routeIs('producto.user') ? 'active' : '' }}">
             <i class="bi bi-bag"></i>
             <span>Tienda</span>
         </a>

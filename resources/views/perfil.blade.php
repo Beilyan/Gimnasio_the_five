@@ -95,14 +95,14 @@
             <span>Mi Perfil</span>
         </a>
 
-        <a href="{{ route('lista_entrenadores') }}"
-           class="nav-item text-center {{ request()->routeIs('lista_entrenadores') ? 'active' : '' }}">
+        <a href="{{ route('entrenador.user') }}"
+           class="nav-item text-center {{ request()->routeIs('entrenador.user') ? 'active' : '' }}">
             <i class="bi bi-person-check"></i>
             <span>Entrenador</span>
         </a>
 
-        <a href="{{ route('tienda') }}"
-           class="nav-item text-center {{ request()->routeIs('tienda') ? 'active' : '' }}">
+        <a href="{{ route('producto.user') }}"
+           class="nav-item text-center {{ request()->routeIs('producto.user') ? 'active' : '' }}">
             <i class="bi bi-bag"></i>
             <span>Tienda</span>
         </a>
