@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\EntrenadorDetalleController;
 use App\Http\Controllers\HorarioController;
+use App\Http\Controllers\PagoController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -96,6 +97,11 @@ Route::get('/horario/lista', [HorarioController::class, 'mostrar'])->name('horar
 Route::get('/horario/editar/{id}', [HorarioController::class, 'editar'])->name('horario.editar');
 Route::post('/horario/actualizar', [HorarioController::class, 'actualizar'])->name('horario.actualizar');
 Route::get('/horario/eliminar/{id}', [HorarioController::class, 'eliminar'])->name('horario.eliminar');
+
+//pagos (test?)
+Route::get('/pagar', [PagoController::class, 'pagar']);
+Route::get('/success', [PagoController::class, 'success'])->name('paypal.success');
+Route::get('/cancel', [PagoController::class, 'cancel'])->name('paypal.cancel');
 
 // LEONEL
 // RUTAS DE BARRA DE NEVEGACIÓN
