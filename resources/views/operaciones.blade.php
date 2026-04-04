@@ -26,6 +26,16 @@
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+                <h5 class="text-xl font-semibold mb-3">CLIENTES</h5>
+                <p class="text-gray-600 mb-4">
+                    En este apartado puedes hacer operaciones sobre clientes a traves de formularios.
+                </p>
+                <a href="{{route('cliente.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                     Ver
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
                 <h5 class="text-xl font-semibold mb-3">EMPLEADOS</h5>
                 <p class="text-gray-600 mb-4">
                     En este apartado puedes hacer operaciones sobre empleados a traves de formularios.
@@ -36,12 +46,12 @@
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">CLIENTES</h5>
+                <h5 class="text-xl font-semibold mb-3">ENTRENADORES</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes hacer operaciones sobre clientes a traves de formularios.
+                    En este apartado puedes hacer operaciones sobre entrenadores a traves de formularios.
                 </p>
-                <a href="{{route('cliente.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                     Ver
+                <a href="{{route('entrenador.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ver
                 </a>
             </div>
 
@@ -76,16 +86,6 @@
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">ENTRENADORES</h5>
-                <p class="text-gray-600 mb-4">
-                    En este apartado puedes hacer operaciones sobre entrenadores a traves de formularios.
-                </p>
-                <a href="{{route('entrenador.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
-                    Ver
-                </a>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
                 <h5 class="text-xl font-semibold mb-3">HORARIOS</h5>
                 <p class="text-gray-600 mb-4">
                     En este apartado puedes hacer operaciones sobre horarios de entrenadores a traves de formularios.
@@ -114,14 +114,14 @@
                 <span>Mi Perfil</span>
             </a>
 
-            <a href="{{ route('lista_entrenadores') }}"
-               class="nav-item text-center {{ request()->routeIs('lista_entrenadores') ? 'active' : '' }}">
+            <a href="{{ route('entrenador.user') }}"
+               class="nav-item text-center {{ request()->routeIs('entrenador.user') ? 'active' : '' }}">
                 <i class="bi bi-person-check"></i>
                 <span>Entrenador</span>
             </a>
 
-            <a href="{{ route('tienda') }}"
-               class="nav-item text-center {{ request()->routeIs('tienda') ? 'active' : '' }}">
+            <a href="{{ route('producto.user') }}"
+               class="nav-item text-center {{ request()->routeIs('producto.user') ? 'active' : '' }}">
                 <i class="bi bi-bag"></i>
                 <span>Tienda</span>
             </a>

@@ -56,15 +56,26 @@
         </div>
 
         <div>
-            <label class="block text-gray-600 mb-1">Imagen actual</label>
-
-            @if($producto->img)
-                <img src="{{ asset('storage/'.$producto->img) }}" class="w-28 h-28 object-cover rounded-lg border mb-2">
+            <label class="block text-gray-600 mb-1">Foto perfil actual</label>
+            @if($producto->img_perfil)
+                <img src="{{ asset('storage/'.$producto->img_perfil) }}" width="80" style="border-radius:50%">
             @endif
-
-            <label class="block text-gray-600 mb-1">Nueva imagen</label>
-            <input type="file" name="img"
+            <input type="file" name="img_perfil"
             class="w-full border border-gray-300 rounded-lg p-2 transition hover:shadow-md">
+        </div>
+        <div>
+            <label class="block text-gray-600 mb-1">Foto portada actual</label>
+            @if($producto->img_portada)
+                <img src="{{ asset('storage/'.$producto->img_portada) }}" width="120">
+            @endif
+            <input type="file" name="img_portada"
+            class="w-full border border-gray-300 rounded-lg p-2 transition hover:shadow-md">
+        </div>
+
+        <div class="md:col-span-2">
+            <label class="block text-gray-600 mb-1">Descripción</label>
+            <input type="text" name="descripcion" value="{{$producto->descripcion}}" placeholder="Ej: La proteína de suero es la fuente definitiva de proteína...." 
+            class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50">
         </div>
 
         <div class="md:col-span-2">

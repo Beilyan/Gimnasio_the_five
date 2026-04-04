@@ -13,10 +13,10 @@
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
-        <a href="{{ route('lista_entrenadores') }}">
+        <a href="{{ route('entrenador.user') }}">
             <i class="bi bi-box-arrow-in-left"></i>
         </a>
-        <img src="{{ asset('img/ent1.avif') }}" class="cover-img" alt="Portada">
+        <img src="{{ asset('storage/' . $detalle->img_portada) }}" class="cover-img" alt="Portada">
         
         <button class="btn btn-light btn-sm edit-cover shadow">
             <i class="bi bi-camera"></i> Editar portada
@@ -30,7 +30,7 @@
 
             {{-- FOTO PERFIL --}}
             <div class="profile-photo">
-                <img src="{{ asset('img/ent1.avif') }}" 
+                <img src="{{ asset('storage/' . $detalle->img_perfil) }}" 
                      class="rounded-circle profile-img shadow" 
                      alt="Perfil">
 
@@ -41,7 +41,7 @@
 
         {{-- NOMBRE --}}
             <div class="ms-4 mt-3 mt-md-0">
-                <h2 class="fw-bold mb-2">Eduardo</h2>
+                <h2 class="fw-bold mb-2">{{ $detalle->nom }} {{ $detalle->apaterno }}</h2>
             </div>
 
         </div>
@@ -57,10 +57,9 @@
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
                     <h1 class="mb-1">Información personal:</h1>
-                    <h3>Tel: 666 55 44433</h3>
-                    <h3>Facebook: Eduardo</h3>
-                    <h3>Instagram: eduardo</h3>
-                    <h3>Correo: eduardo00000000000000@gmail.com</h3>
+                    <h3>Facebook:</strong> {{ $detalle->facebook }}</h3>
+                    <h3>Instagram:</strong> {{ $detalle->instagram }}</h3>
+                    <h3>Otro Contacto:</strong> {{ $detalle->otro }}</h3>
                 </div>
             </div>
         </div>
@@ -69,9 +68,14 @@
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
                     <h1 class="mb-1">Horarios:</h1>
-                    <h3>Lunes: 5am-12pm</h3>
-                    <h3>Martes: 5am-12pm</h3>
-                    <h3>Miércoles: 12pm-7pm</h3>
+                    @if($listaHorarios->isEmpty())
+                            <h3 class="h6 text-muted italic">No hay horarios registrados para este entrenador.</h3>
+                        @else
+                        @foreach($listaHorarios as $h)
+                            <h3 class="mb-1">{{ $h->dia }}:</strong> {{ $h->hora_inicio }} - {{ $h->hora_fin }}
+                            </h3>
+                        @endforeach
+                     @endif
                 </div>
             </div>
         </div>
@@ -80,9 +84,7 @@
             <div class="bg-light text-black p-4 rounded-4 d-flex aling-items-center">
                 <div>
                     <h1 class="mb-1">Profesional:</h1>
-                    <h3>Entrenador personal</h3>
-                    <h3>Entrenador de Fuerza y Acondicionamiento</h3>
-                    <h3>Entrenador de Perdida de peso</h3>
+                    <h3>{!! nl2br(e($detalle->descripcion)) !!}</h3>
                 </div>
             </div>
         </div>
