@@ -28,7 +28,7 @@
             <select name="empleado_id" required
             class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
                 @foreach ($empleados as $item)
-                    <option value="{{$item->id}}">{{$item->nom_persona}} {{$item->apaterno}} {{$item->amaterno}}</option>
+                    <option value="{{$item->id}}">{{$item->persona->nom_persona}} {{$item->persona->apaterno}} {{$item->persona->amaterno}}</option>
                 @endforeach
             </select>
         </div>
