@@ -23,7 +23,7 @@
 
         <a href="/entrenador/nueva">
             <button class="bg-gray-800 text-white px-5 py-2 rounded-lg hover:bg-black hover:scale-105 transition duration-300 shadow-md">
-                Nueva Entrenador
+                Nuevo Entrenador
             </button>
         </a>
 

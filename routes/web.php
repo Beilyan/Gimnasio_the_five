@@ -47,6 +47,7 @@ Route::get('/membresia/lista', [MembresiaController::class, 'mostrar'])->name('m
 Route::get('/membresia/editar/{id}', [MembresiaController::class, 'editar'])->name('membresia.editar');
 Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])->name('membresia.actualizar');
 Route::get('/membresia/eliminar/{id}', [MembresiaController::class, 'eliminar'])->name('membresia.eliminar');
+Route::get('/membresias', [MembresiaController::class, 'verMembresias'])->name('membresia.ver');
 
 //cliente
 Route::get('/cliente/nueva', [ClienteController::class, 'nueva'])->name('cliente.nueva');

@@ -47,4 +47,9 @@ class MembresiaController extends Controller
 
         return redirect()->route('membresia.mostrar');
     }
+
+    function verMembresias(){
+        $membresia = Membresia::all();
+        return view('ver_membresias', compact('membresia'));
+    }
 }

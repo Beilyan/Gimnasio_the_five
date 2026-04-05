@@ -11,20 +11,20 @@
 
 {{-- INICIO DE FOTOS --}}
     <!-- PORTADA -->
-    <div class="profile-cover shadow">
+    {{-- <div class="profile-cover shadow">
         <img src="{{ asset('img/foto1.jpeg') }}" class="cover-img" alt="Portada">
 
         <button class="btn btn-light btn-sm edit-cover shadow">
             <i class="bi bi-camera"></i> Editar portada
         </button>
-    </div>
+    </div> --}}
 
     <!-- INFORMACIÓN PERFIL -->
     <div class="profile-info bg-white p-4 shadow">
 
         <div class="d-flex align-items-center flex-wrap">
 
-            <!-- FOTO PERFIL -->
+            {{-- <!-- FOTO PERFIL -->
             <div class="profile-photo">
                 <img src="{{ asset('img/foto1.jpeg') }}" 
                      class="rounded-circle profile-img shadow" 
@@ -33,11 +33,11 @@
                 <button class="btn btn-light btn-sm change-photo shadow">
                     <i class="bi bi-camera"></i>
                 </button>
-            </div>
+            </div> --}}
 
             <!-- NOMBRE Y BADGE -->
             <div class="ms-4 mt-3 mt-md-0">
-                <h2 class="fw-bold mb-2">Carlos Méndez</h2>
+                <h2 class="fw-bold mb-2">Bienvenido Carlos Méndez</h2>
             </div>
 
         </div>
@@ -69,13 +69,23 @@
             </div>
         </div>
     </div>
-    <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    {{-- <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar" style="width: 25%">25%</div>
-</div>
+</div> --}}
     <div class=" container mt-4  p-4 rounded-3 bg-dark">
         <h6 class="text-center text-white">Duración total</h6>
         <h1 class="text-center text-white">1 Meses</h1>
     </div>
+    
+</div>
+<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8"> 
+    <a href="{{route('membresia.ver')}}">
+    <div class=" container mt-2  p-2 rounded-3 bg-dark">
+        <span class="text-white text-center">
+            Ver membresías disponibles
+        </span>
+    </div>
+    </a>
 </div>
 {{-- FIN DE CONTENEDOR DE INFORMACION --}}
 
