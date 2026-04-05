@@ -24,19 +24,19 @@
 
             <div>
                 <label class="block text-gray-600 mb-1">Nombre</label>
-                <input type="text" name="nom_membresia" placeholder="Membresía..."
+                <input type="text" name="nom_membresia" placeholder="Membresía..." required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Precio</label>
-                <input type="number" min="0" name="costo" placeholder="00.00"
+                <input type="number" min="0" name="costo" placeholder="00.00" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Duración en meses</label>
-                <input type="number" min="0" name="duracion_meses" placeholder="3"
+                <input type="number" min="0" name="duracion_meses" placeholder="3" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
@@ -44,11 +44,11 @@
                 <label class="block text-gray-600 mb-1">Descripción</label>
                 <textarea
                     name="descripcion"
+                    required
                     rows="3"
                     placeholder="Esta membresía cubre..."
                     oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"
-                    class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none">
-                </textarea>
+                    class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"></textarea>
             </div>
 
             <div class="md:col-span-2">

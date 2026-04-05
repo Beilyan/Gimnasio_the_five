@@ -36,7 +36,7 @@
 
                 @foreach ($persona as $item)
                     <option value="{{$item->id}}">
-                        {{$item->nom_persona}}
+                        {{$item->nom_persona}} {{$item->apaterno}} {{$item->amaterno}}
                     </option>
                 @endforeach
 

@@ -24,25 +24,25 @@
 
             <div>
                 <label class="block text-gray-600 mb-1">Nombre</label>
-                <input type="text" name="nom_proveedor" placeholder="Almacenes Guerrero"
+                <input type="text" name="nom_proveedor" placeholder="Almacenes Guerrero" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Teléfono</label>
-                <input type="text" name="telefono" placeholder="##-###-###-####"
+                <input type="text" name="telefono" placeholder="##-###-###-####" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Correo</label>
-                <input type="email" name="correo" placeholder="correo@gmail.com"
+                <input type="email" name="correo" placeholder="correo@gmail.com" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div class="md:col-span-2">
                 <label class="block text-gray-600 mb-1">Descripción</label>
-                <textarea name="descripcion" rows="3" placeholder="Este proveedor entrega en..."
+                <textarea name="descripcion" rows="3" placeholder="Este proveedor entrega en..." required
                 class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
             </div>
 

@@ -25,42 +25,42 @@
 
             <div>
                 <label class="block text-gray-600 mb-1">Nombres</label>
-                <input type="text" name="nom_persona" placeholder="Nombre o nombres"
+                <input type="text" name="nom_persona" placeholder="Nombre o nombres" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Apellido Paterno</label>
-                <input type="text" name="apaterno" placeholder="Primer apellido"
+                <input type="text" name="apaterno" placeholder="Primer apellido" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Apellido Materno</label>
-                <input type="text" name="amaterno" placeholder="Segundo apellido"
+                <input type="text" name="amaterno" placeholder="Segundo apellido" 
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Fecha de nacimiento</label>
-                <input type="date" name="fnac"
+                <input type="date" name="fnac" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Teléfono</label>
-                <input type="text" name="telefono" placeholder="##-###-###-####"
+                <input type="text" name="telefono" placeholder="##-###-###-####" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
                 <label class="block text-gray-600 mb-1">Correo electrónico</label>
-                <input type="email" name="correo" placeholder="correo@gmail.com"
+                <input type="email" name="correo" placeholder="correo@gmail.com" required
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
 
             <div>
-                <label class="block text-gray-600 mb-1">Sexo</label>
+                <label class="block text-gray-600 mb-1">Sexo</label> required
                 <select name="sexo"
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
                     <option value="M">Masculino</option>

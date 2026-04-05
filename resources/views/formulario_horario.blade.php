@@ -49,13 +49,13 @@
 
         <div>
             <label class="block text-gray-600 mb-1">Hora inicio</label>
-            <input type="time" name="hora_inicio" 
+            <input type="time" name="hora_inicio" required
             class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
         </div>
 
         <div>
             <label class="block text-gray-600 mb-1">hora fin</label>
-            <input type="time" name="hora_fin" 
+            <input type="time" name="hora_fin" required
             class="w-full border border-gray-300 rounded-lg p-3 transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
         </div>
 
