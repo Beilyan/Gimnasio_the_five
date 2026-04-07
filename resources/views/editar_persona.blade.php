@@ -68,6 +68,15 @@
         </select>
     </div>
 
+    <div>
+        <label class="block text-gray-600 mb-1">Tipo de usuario</label>
+        <select name="rol"
+        class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+                <option value="1">Usuario</option>
+                <option value="2">Administrador</option>
+        </select>
+    </div>
+
     <div class="md:col-span-2">
         <button type="submit"
         class="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-black hover:scale-105 transition duration-300 shadow-lg">

@@ -9,6 +9,7 @@
 </head>
 <body>
 
+ @auth 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
 <div class="container mt-4">
     <div class="d-flex align-items-center justify-content-center gap-2">
@@ -78,12 +79,14 @@
             <i class="bi bi-bag"></i>
             <span>Tienda</span>
         </a>
-
+        
+        @if(auth()->check() && @auth()->user()->persona->rol == '2')
         <a href="{{ route('operaciones') }}"
            class="nav-item text-center {{ request()->routeIs('operaciones') ? 'active' : '' }}">
             <i class="bi bi-bug"></i>
             <span>Operaciones</span>
         </a>
+        @endif
 
     </div>
 </nav>
@@ -134,6 +137,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 </script>
+@endguest
+
+@guest
+<div class="container mt-4 ">
+    <div class="mt-2">
+        <a href="{{ route('inicio') }}#cartas">
+            <i class="bi bi-box-arrow-in-left fs-1"></i>
+        </a>
+    </div>
+</div>
+
+@include('inicio_sesion')
+
+@endguest
 
 </body>
 </html>

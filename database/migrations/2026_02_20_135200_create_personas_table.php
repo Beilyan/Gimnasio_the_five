@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('personas', function (Blueprint $table) {
             $table->id();
+             // Fks
+            $table->unsignedBigInteger('user_id');
             $table->string('nom_persona');
             $table->string('apaterno');
             $table->string('amaterno')->nullable();
@@ -20,7 +22,10 @@ return new class extends Migration
             $table->string('telefono', 25);
             $table->string('correo');
             $table->string('sexo');
+            $table->integer('rol')->default(1);
             $table->timestamps();
+            //Referenciar una Fk:
+            $table-> foreign('user_id')->references('id')->on('users');
         });
     }
 

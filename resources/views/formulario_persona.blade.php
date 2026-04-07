@@ -60,11 +60,20 @@
             </div>
 
             <div>
-                <label class="block text-gray-600 mb-1">Sexo</label> required
+                <label class="block text-gray-600 mb-1">Sexo</label>
                 <select name="sexo"
                 class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
                     <option value="M">Masculino</option>
                     <option value="F">Femenino</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-600 mb-1">Tipo de usuario</label>
+                <select name="rol"
+                class="w-full border border-gray-300 rounded-lg p-3 transition duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    <option value="1">Usuario</option>
+                    <option value="2">Administrador</option>
                 </select>
             </div>
 

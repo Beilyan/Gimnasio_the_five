@@ -18,9 +18,13 @@
         </a>
         <img src="{{ asset('storage/' . $detalle->img_portada) }}" class="cover-img" alt="Portada">
         
+       @if(auth()->check() && auth()->user()->persona->rol == '2')
+        <a href="{{ route('entrenador.editar', auth()->user()->id) }}">
         <button class="btn btn-light btn-sm edit-cover shadow">
             <i class="bi bi-camera"></i> Editar portada
         </button>
+        </a>
+        @endif
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -34,9 +38,13 @@
                      class="rounded-circle profile-img shadow" 
                      alt="Perfil">
 
+                @if(auth()->check() && auth()->user()->persona->rol == '2')
+                <a href="{{ route('entrenador.editar', auth()->user()->id) }}">
                 <button class="btn btn-light btn-sm change-photo shadow">
                     <i class="bi bi-camera"></i>
                 </button>
+                </a>
+                @endif
             </div>
 
         {{-- NOMBRE --}}
