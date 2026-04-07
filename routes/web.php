@@ -73,6 +73,7 @@ Route::get('/tienda', [ProductoController::class, 'mostrarUser'])->name('product
 Route::get('/producto/editar/{id}', [ProductoController::class, 'editar'])->name('producto.editar');
 Route::post('/producto/actualizar', [ProductoController::class, 'actualizar'])->name('producto.actualizar');
 Route::get('/producto/eliminar/{id}', [ProductoController::class, 'eliminar'])->name('producto.eliminar');
+Route::get('/producto/buscar', [ProductoController::class, 'buscar'])->name('buscar.producto');
 Route::get('/producto/{id}', [ProductoController::class, 'verProducto'])->name('producto.producto');
 
 //especialidad
@@ -93,6 +94,7 @@ Route::get('/lista_entrenadores', [EntrenadorDetalleController::class, 'mostrarU
 Route::get('/entrenador/editar/{id}', [EntrenadorDetalleController::class, 'editar'])->name('entrenador.editar');
 Route::post('/entrenador/actualizar', [EntrenadorDetalleController::class, 'actualizar'])->name('entrenador.actualizar');
 Route::get('/entrenador/eliminar/{id}', [EntrenadorDetalleController::class, 'eliminar'])->name('entrenador.eliminar');
+Route::get('/entrenador/buscar', [EntrenadorDetalleController::class, 'buscar'])->name('entrenador.buscar');
 Route::get('/entrenador/{id}', [EntrenadorDetalleController::class, 'verPerfil'])->name('entrenador.perfil');
 
 //horario

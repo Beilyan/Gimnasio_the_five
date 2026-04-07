@@ -11,13 +11,12 @@
 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
 <div class="container mt-4">
-    <div class="d-flex align-items-center gap-2 mx-auto" style="max-width: 1300px">
-        <div class="input-group">
-            <input type="text" class="form-control border-dark" placeholder="Buscar...">
-            <button class="btn btn-outline-secondary border-dark" type="button">
-              Buscar
-            </button>
+    <div class="d-flex align-items-center justify-content-center gap-2">
+        <div class="position-relative d-inline-block" style="width: 800px;">
+          <input type="text" id="buscador" class="form-control" placeholder="Buscar...">
+          <ul id="resultados" class="list-group position-absolute w-100 shadow" style="z-index: 1000;"></ul>
         </div>
+
         <a href="{{ asset('carrito') }}">
         <button class="btn btn-warning">
             <i class="bi bi-cart-fill"></i>
@@ -93,5 +92,48 @@
 {{-- INICIO DE APARTADO EN BLANCO --}}
 <div class="bg-white" style="height: 150px"></div>  
 {{-- FIN DE APARTADO EN BLANCO --}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    let buscador = document.getElementById('buscador');
+    let resultados = document.getElementById('resultados');
+
+    let url = "{{ route('buscar.producto') }}";
+
+    buscador.addEventListener('keyup', function() {
+        let query = this.value;
+
+        if(query.length > 0){
+            fetch(`${url}?query=${query}`)
+                .then(res => res.json())
+                .then(data => {
+                    resultados.innerHTML = '';
+
+                    data.forEach(pro => {
+                        resultados.innerHTML += `
+                            <li class="list-group-item item" 
+                                style="cursor:pointer;"
+                                data-id="${pro.id}">
+                                ${pro.nom_producto}
+                            </li>
+                        `;
+                    });
+                    document.querySelectorAll('.item').forEach(item => {
+                        item.addEventListener('click', function() {
+                            let id = this.getAttribute('data-id');
+                            window.location.href = `/producto/${id}`;
+                        });
+                    });
+
+                });
+        } else {
+            resultados.innerHTML = '';
+        }
+    });
+
+});
+</script>
+
 </body>
 </html>
