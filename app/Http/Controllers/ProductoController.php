@@ -118,5 +118,16 @@ class ProductoController extends Controller
     ->firstOrFail();
 
     return view('producto', compact('producto'));
-}
+    }
+
+    public function buscar(Request $req) {
+        
+    $query = $req->get('query');
+
+    $productos = Producto::where('nom_producto', 'LIKE', "%{$query}%")
+        ->limit(10)
+        ->get();
+
+    return response()->json($productos);
+    }
 }

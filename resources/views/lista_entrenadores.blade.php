@@ -11,11 +11,11 @@
 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
 <div class="container mt-4">
-    <div class="input-group mx-auto" style="max-width: 1400px">
-        <input type="text" class="form-control border-dark" placeholder="Buscar...">
-        <button class="btn btn-outline-secondary border-dark" type="button">
-            Buscar
-        </button>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="position-relative d-inline-block" style="width: 800px;">
+          <input type="text" id="buscador" class="form-control" placeholder="Buscar...">
+          <ul id="resultados" class="list-group position-absolute w-100 shadow" style="z-index: 1000;"></ul>
+        </div>
     </div>
 </div>
 {{-- FIN DE BARRA DE BUSQUEDA --}}
@@ -85,5 +85,63 @@
 {{-- INICIO DE APARTADO EN BLANCO --}}
 <div class="bg-white" style="height: 150px"></div>  
 {{-- FIN DE APARTADO EN BLANCO --}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    let buscador = document.getElementById('buscador');
+    let resultados = document.getElementById('resultados');
+
+    let url = "{{ route('entrenador.buscar') }}";
+
+    buscador.addEventListener('keyup', function() {
+        let query = this.value.trim();
+
+        if(query.length > 0){
+
+            fetch(`${url}?query=${query}`)
+                .then(res => res.json())
+                .then(data => {
+
+                    resultados.innerHTML = '';
+
+                    data.forEach(pro => {
+
+                        // Evitar errores si algo viene null
+                        let nombre = pro.empleado?.persona?.nom_persona ?? '';
+                        let apaterno = pro.empleado?.persona?.apaterno ?? '';
+
+                        resultados.innerHTML += `
+                            <li class="list-group-item item"
+                                style="cursor:pointer;"
+                                data-id="${pro.id}">
+                                ${nombre} ${apaterno}
+                            </li>
+                        `;
+                    });
+
+                    // Evento click
+                    document.querySelectorAll('.item').forEach(item => {
+                        item.addEventListener('click', function() {
+                            let id = this.getAttribute('data-id');
+
+                            // Cambia la ruta si usas otra
+                            window.location.href = `/entrenador/${id}`;
+                        });
+                    });
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        } else {
+            resultados.innerHTML = '';
+        }
+    });
+
+});
+</script>
+
 </body>
 </html>
