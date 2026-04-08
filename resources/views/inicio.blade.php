@@ -8,7 +8,7 @@
   @include('uso')
 </head>
 <body>
-  
+
     {{-- INICIO DEL CARRUSEL --}}
     <div id="carouselExampleCaptions" class="carousel slide container-fluid p-0">
   <div class="carousel-indicators">
@@ -42,17 +42,31 @@
 </div>
 {{-- FIN DEL CARRUSEL --}}
 
+ @auth 
+<li class=" mt-5 d-flex justify-content-start ms-5">
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button class="btn btn-danger d-flex align-items-center gap-2 px-3 py-3 rounded-2 shadow-sm" type="submit">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Cerrar sesión</span>
+        </button>
+    </form>
+</li>
+@endguest
+
 <div class="text-center font-family mt-5">
   <h1><strong>¿QUÉ QUIERES ENTRENAR HOY?</strong></h1>
   <h3 class="text-secondary">Selecciona tu grupo muscular favorito y descubre ejercicios</h3>
 </div>
 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
+ @auth 
 <div class="container mt-4 ">
     <div class="mx-auto" style="max-width: 800px">
         <x-buscador /> 
     </div>
 </div>
+@endguest
 {{-- FIN DE BARRA DE BUSQUEDA --}}
 
 {{-- INICIO DE CARTAS --}}
@@ -180,11 +194,13 @@
             <span>Tienda</span>
         </a>
 
+        @if(auth()->check() && @auth()->user()->persona->rol == '2')
         <a href="{{ route('operaciones') }}"
            class="nav-item text-center {{ request()->routeIs('operaciones') ? 'active' : '' }}">
             <i class="bi bi-bug"></i>
             <span>Operaciones</span>
         </a>
+        @endif
 
     </div>
 </nav>
@@ -193,5 +209,6 @@
 {{-- INICIO DE APARTADO EN BLANCO --}}
 <div class="bg-white" style="height: 150px"></div>
 {{-- FIN DE APARTADO EN BLANCO --}}
+
 </body>
 </html>

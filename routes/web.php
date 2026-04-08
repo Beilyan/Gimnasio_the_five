@@ -120,6 +120,11 @@ Route::get('inicio_sesion', function () {
     return view('inicio_sesion');
 })->name('inicio_sesion');
 
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect()->route('inicio');
+})->name('logout');
+
 Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
@@ -788,15 +793,15 @@ Route::get('/google-login', function(){
 Route::get('/google-callback', function(){
     $user = Socialite::driver('google')->user();
     
-    $buscarUsuario = User::where('api_id', $user->id)->where('tipo', 'google')->first();
+    $buscarUsuario = User::where('email', $user->email)->where('tipo', 'google')->first();
 
     if($buscarUsuario){
+        $buscarUsuario->avatar = $user->avatar;
+        $buscarUsuario->api_id = $user->id;
+        $buscarUsuario->save();
+        
         //Ya tengo a ese usuario de google registrado
         Auth::login($buscarUsuario);//Inicio sesión
-    }else{
-        //Ese usuario de google es nuevo, asi que lo registramos........
-        $nuevoUsuario = User::create(['name' => $user->name, 'email' => $user->email, 'tipo' => 'google', 'api_id' => $user->id, 'avatar' => $user->avatar]);
-        Auth::login($nuevoUsuario); //Inicio sesión
     }
     return redirect()->route('inicio');
 });

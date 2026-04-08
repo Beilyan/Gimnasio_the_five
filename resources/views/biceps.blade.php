@@ -9,6 +9,7 @@
 </head>
 <body>
 
+ @auth 
 {{-- INICIO DE BARRA DE BUSQUEDA --}}
 <div class="container mt-4 ">
     <div class="mx-auto" style="max-width: 800px">
@@ -30,10 +31,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_1') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_1.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl predicador con polea</h3>
+        <h3>Curl predicador con polea</h3><br>
       </div>
     </div>
   </div>
@@ -41,7 +42,7 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('biceps_2') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_2.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl predicador a una mano con mancuerna</h3>
@@ -52,10 +53,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_3') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_3.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl martillo en polea (con cuerda)</h3>
+        <h3>Curl martillo en polea (con cuerda)</h3><br>
       </div>
     </div>
   </div>
@@ -63,7 +64,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_4') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_4.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl concentrado con mancuerna agarre prono</h3>
@@ -74,10 +75,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_5') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_5.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl con barra Z</h3>
+        <h3>Curl con barra Z</h3><br>
       </div>
     </div>
   </div>
@@ -85,7 +86,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_6') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_6.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl con barra Z (agarre abierto)</h3>
@@ -96,7 +97,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_7') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_7.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl alternado con banda elástica</h3>
@@ -107,7 +108,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_8') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_8.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl agarre prono con mancuernas</h3>
@@ -118,10 +119,10 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_9') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_9.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl a un brazo en polea</h3>
+        <h3>Curl a un brazo en polea</h3><br>
       </div>
     </div>
   </div>
@@ -129,7 +130,7 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('biceps_10') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_10.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl de martillo cruzado con mancuernas</h3>
@@ -140,10 +141,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_11') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_11.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl concentrado en máquina</h3>
+        <h3>Curl concentrado en máquina</h3><br>
       </div>
     </div>
   </div>
@@ -151,10 +152,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_12') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_12.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl en polea baja con barra recta</h3>
+        <h3>Curl en polea baja con barra recta</h3><br>
       </div>
     </div>
   </div>
@@ -162,7 +163,7 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_13') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_13.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl predicador con mancuernas (agarre supino)</h3>
@@ -173,10 +174,10 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('biceps_14') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_14.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Bíceps, brazos en cruz en polea alta</h3>
+        <h3>Bíceps, brazos en cruz en polea alta</h3><br>
       </div>
     </div>
   </div>
@@ -184,10 +185,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_15') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_15.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl de bíceps en banco Scott</h3>
+        <h3>Curl de bíceps en banco Scott</h3><br>
       </div>
     </div>
   </div>
@@ -195,10 +196,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_16') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_16.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl martillo con mancuernas</h3>
+        <h3>Curl martillo con mancuernas</h3><br>
       </div>
     </div>
   </div>
@@ -206,7 +207,7 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_17') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_17.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl alternado con mancuerna</h3>
@@ -217,10 +218,10 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('biceps_18') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_18.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl de bíceps</h3>
+        <h3>Curl de bíceps</h3><br>
       </div>
     </div>
   </div>
@@ -228,7 +229,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_19') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_19.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl invertido con barra</h3>
@@ -239,7 +240,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('biceps_20') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/bicep_20.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl Zottman con mancuernas</h3>
@@ -254,5 +255,20 @@
 {{-- INICIO DE APARTADO EN BLANCO --}}
 <div class="bg-white" style="height: 100px"></div>  
 {{-- FIN DE APARTADO EN BLANCO --}}
+@endguest
+
+@guest
+<div class="container mt-4 ">
+    <div class="mt-2">
+        <a href="{{ route('inicio') }}#cartas">
+            <i class="bi bi-box-arrow-in-left fs-1"></i>
+        </a>
+    </div>
+</div>
+
+@include('inicio_sesion')
+
+@endguest
+
 </body>
 </html>
