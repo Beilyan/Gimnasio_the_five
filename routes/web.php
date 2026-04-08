@@ -13,6 +13,7 @@ use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\EntrenadorDetalleController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\PagoController;
+use App\Http\Controllers\CarritoController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -48,6 +49,9 @@ Route::get('/membresia/editar/{id}', [MembresiaController::class, 'editar'])->na
 Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])->name('membresia.actualizar');
 Route::get('/membresia/eliminar/{id}', [MembresiaController::class, 'eliminar'])->name('membresia.eliminar');
 Route::get('/membresias', [MembresiaController::class, 'verMembresias'])->name('membresia.ver');
+Route::post('/membresia/pagar/{id}', [MembresiaController::class, 'pagar'])->name('membresia.pagar');
+Route::get('/membresia/success', [MembresiaController::class, 'success'])->name('membresia.success');
+Route::get('/membresia/cancel', [MembresiaController::class, 'cancel'])->name('membresia.cancel');
 
 //cliente
 Route::get('/cliente/nueva', [ClienteController::class, 'nueva'])->name('cliente.nueva');
@@ -103,10 +107,16 @@ Route::get('/horario/editar/{id}', [HorarioController::class, 'editar'])->name('
 Route::post('/horario/actualizar', [HorarioController::class, 'actualizar'])->name('horario.actualizar');
 Route::get('/horario/eliminar/{id}', [HorarioController::class, 'eliminar'])->name('horario.eliminar');
 
-//pagos (test?)
+//pagos (test para la api)
 Route::get('/pagar', [PagoController::class, 'pagar']);
 Route::get('/success', [PagoController::class, 'success'])->name('paypal.success');
 Route::get('/cancel', [PagoController::class, 'cancel'])->name('paypal.cancel');
+
+//carro
+Route::post('/carrito/agregar', [CarritoController::class, 'agregar'])->name('carrito.agregar');
+Route::get('/carrito', [CarritoController::class, 'index'])->name('carrito.index');
+Route::delete('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
+Route::delete('/carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carrito.vaciar');
 
 // LEONEL
 // RUTAS DE BARRA DE NEVEGACIÓN
