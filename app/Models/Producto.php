@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     protected $table = 'productos';
+
     protected $fillable = [
         'cod_producto',
         'nom_producto',
@@ -19,4 +20,8 @@ class Producto extends Model
         'proveedor_id',
         'estatus'
     ];
+
+    public function detalles(){
+        return $this->hasMany(DetalleOrden::class);
+    }
 }

@@ -6,15 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Carrito;
 use App\Models\Producto;
 use App\Models\CarritoItem;
+use App\Models\Persona;
 
 class CarritoController extends Controller
 {
     public function agregar(Request $request){
-        $user = auth()->user();
+        $persona = Persona::where('user_id', auth()->id())->first();
 
-        $carrito = Carrito::firstOrCreate([
-            'user_id' => $user->id
-        ]);
+        $carrito = Carrito::firstOrCreate(['persona_id' => $persona->id]);
 
         $producto = Producto::findOrFail($request->producto_id);
 
@@ -38,12 +37,17 @@ class CarritoController extends Controller
     }
 
     public function index(){
-        $carrito = Carrito::with('items.producto')
-            ->where('user_id', auth()->id())
-            ->first();
+    $persona = Persona::where('user_id', auth()->id())->first();
 
-        return view('carrito', compact('carrito'));
+    if (!$persona) {
+        return view('carrito', ['carrito' => null]);
     }
+
+    $carrito = Carrito::with('items.producto')
+        ->firstOrCreate(['persona_id' => $persona->id]);
+
+    return view('carrito', compact('carrito'));
+}
 
         public function eliminar($id){
         CarritoItem::findOrFail($id)->delete();
@@ -51,7 +55,13 @@ class CarritoController extends Controller
     }
 
     public function vaciar(){
-        $carrito = Carrito::where('user_id', auth()->id())->first();
+        $persona = Persona::where('user_id', auth()->id())->first();
+
+        if (!$persona) {
+            return back();
+        }
+
+        $carrito = Carrito::where('persona_id', $persona->id)->first();
 
         if ($carrito) {
             $carrito->items()->delete();

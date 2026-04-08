@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ordenes', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('persona_id')->constrained();
-            $table->decimal('total', 10, 2);
-            $table->string('estado');
-            $table->timestamps();
+        Schema::table('carritos', function (Blueprint $table) {
+            $table->foreignId('persona_id')->after('id')->constrained()->onDelete('cascade');
+
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
         });
     }
 
@@ -25,6 +24,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ordenes');
+        Schema::table('carritos', function (Blueprint $table) {
+            //
+        });
     }
 };

@@ -10,6 +10,12 @@
 <body>
 
  @auth 
+
+ @php
+    $persona = auth()->user()->persona ?? null;
+    $pago = $persona ? $persona->ultimoPago : null;
+    $membresia = $pago ? $pago->membresia : null;
+@endphp
 {{-- INICIO DE FOTOS --}}
     <!-- PORTADA -->
     {{-- <div class="profile-cover shadow">
@@ -38,7 +44,7 @@
 
             <!-- NOMBRE Y BADGE -->
             <div class="ms-4 mt-3 mt-md-0">
-                <h2 class="fw-bold mb-2">Bienvenido Carlos Méndez</h2>
+                <h2 class="fw-bold mb-2">Bienvenido {{$persona ? $persona->nom_persona . ' ' . $persona->apaterno : 'Usuario'}}</h2>
             </div>
 
         </div>
@@ -55,7 +61,7 @@
                 <i class="bi bi-calendar4 icono-grande me-5"></i>
                 <div>
                     <h2 class="mb-1">Fecha inicio</h2><br>
-                    <h2 class="mb-0">01/01/26</h2>
+                    <h2 class="mb-0">{{ $pago ? \Carbon\Carbon::parse($pago->fecha_compra)->format('d/m/Y') : 'Sin datos' }}</h2>
                 </div>
             </div>
         </div>
@@ -65,7 +71,7 @@
                 <i class="bi bi-calendar-check-fill icono-grande me-5"></i>
                 <div>
                     <h2 class="mb-1">Fecha final</h2><br>
-                    <h2 class="mb-0">01/01/31</h2>
+                    <h2 class="mb-0">{{ $pago ? \Carbon\Carbon::parse($pago->fecha_expira)->format('d/m/Y') : 'Sin datos' }}</h2>
                 </div>
             </div>
         </div>
@@ -75,7 +81,7 @@
 </div> --}}
     <div class=" container mt-4  p-4 rounded-3 bg-dark">
         <h6 class="text-center text-white">Duración total</h6>
-        <h1 class="text-center text-white">1 Meses</h1>
+        <h1 class="text-center text-white">{{$membresia ? $membresia->duracion_meses . ' Meses' : 'Sin membresía'}}</h1>
     </div>
     
 </div>

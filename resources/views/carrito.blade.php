@@ -19,7 +19,7 @@
                 </a>
                 <div>
                     <h1 class="text-2xl font-bold text-gray-800">Carrito de Compra</h1>
-                    <p class="text-sm text-gray-500">{{$carrito ? $carrito->items->count():0}} productos</p>
+                    <p class="text-sm text-gray-500">{{ isset($carrito) ? $carrito->items->count() : 0 }} productos</p>
                 </div>
             <form action="{{route('carrito.vaciar')}}" method="POST">
                 @csrf

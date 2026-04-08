@@ -93,44 +93,54 @@ class MembresiaController extends Controller
     }
 
     public function success(Request $request){
-        $provider = new PayPalClient;
-        $provider->setApiCredentials(config('paypal'));
-        $provider->getAccessToken();
+    $provider = new PayPalClient;
+    $provider->setApiCredentials(config('paypal'));
+    $provider->getAccessToken();
 
-        $response = $provider->capturePaymentOrder($request->token);
+    $response = $provider->capturePaymentOrder($request->token);
 
-        if (isset($response['status']) && $response['status'] == 'COMPLETED') {
-
-            $membresia_id = session('membresia_id');
-            $membresia = Membresia::findOrFail($membresia_id);
-
-            $user_id = auth()->user()->id;
-
-            $existe = DB::table('pago_membresia')
-                ->where('persona_id', $user_id)
-                ->where('fecha_expira', '>', now())
-                ->exists();
-
-            if ($existe) {
-                return "Ya tienes una membresía activa";
-            }
-
-            DB::table('pago_membresia')->insert([
-                'persona_id' => $user_id,
-                'membresia_id' => $membresia->id,
-                'fecha_compra' => now(),
-                'fecha_expira' => now()->addMonths($membresia->duracion_meses),
-            ]);
-
-            return "Pago exitoso y membresía activada";
-        }
-
+    if ($response['status'] !== 'COMPLETED') {
+        return redirect()->route('ver_membresias')
+            ->with('error', 'Pago no completado');
     }
+
+    $user = auth()->user();
+    $persona_id = $user->persona->id;
+    $membresia_id = session('membresia_id');
+
+    if (!$membresia_id) {
+        return "Error: no hay membresía en sesión";
+    }
+
+    $membresia = Membresia::findOrFail($membresia_id);
+
+    $existe = DB::table('pago_membresias')
+        ->where('persona_id', $user->id)
+        ->where('fecha_expira', '>', now())
+        ->exists();
+
+    if ($existe) {
+        return redirect()->route('ver_membresias')
+            ->with('error', 'Ya tienes una membresía activa');
+    }
+
+    DB::table('pago_membresias')->insert([
+        'persona_id' => $persona_id,
+        'membresia_id' => $membresia->id,
+        'fecha_compra' => now(),
+        'fecha_expira' => now()->addMonths($membresia->duracion_meses),
+    ]);
+
+    session()->forget('membresia_id');
+
+    return redirect()->route('perfil')
+        ->with('success', 'Membresía activada correctamente');
+}
 
     public function cancel(){
         session()->forget('membresia_id');
 
-        return redirect()->route('ver_membresias')
+        return redirect()->route('perfil')
             ->with('error', 'Pago cancelado');
     }
 }
