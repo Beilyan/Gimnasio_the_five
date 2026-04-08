@@ -49,7 +49,16 @@ class User extends Authenticatable
         ];
     }
 
+    public function carrito()
+{
+    return $this->hasOne(Carrito::class);
+}
+
     function persona(){
-        return $this->hasOne(Persona::class);
+        return $this->hasOne(Persona::class, 'user_id');
     }
+
+    public function user(){
+    return $this->belongsTo(User::class);
+}
 }

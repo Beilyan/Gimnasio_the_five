@@ -13,6 +13,8 @@ use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\EntrenadorDetalleController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\PagoController;
+use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\OrdenController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -48,6 +50,9 @@ Route::get('/membresia/editar/{id}', [MembresiaController::class, 'editar'])->na
 Route::post('/membresia/actualizar', [MembresiaController::class, 'actualizar'])->name('membresia.actualizar');
 Route::get('/membresia/eliminar/{id}', [MembresiaController::class, 'eliminar'])->name('membresia.eliminar');
 Route::get('/membresias', [MembresiaController::class, 'verMembresias'])->name('membresia.ver');
+Route::post('/membresia/pagar/{id}', [MembresiaController::class, 'pagar'])->name('membresia.pagar');
+Route::get('/membresia/success', [MembresiaController::class, 'success'])->name('membresia.success');
+Route::get('/membresia/cancel', [MembresiaController::class, 'cancel'])->name('membresia.cancel');
 
 //cliente
 Route::get('/cliente/nueva', [ClienteController::class, 'nueva'])->name('cliente.nueva');
@@ -75,6 +80,12 @@ Route::post('/producto/actualizar', [ProductoController::class, 'actualizar'])->
 Route::get('/producto/eliminar/{id}', [ProductoController::class, 'eliminar'])->name('producto.eliminar');
 Route::get('/producto/buscar', [ProductoController::class, 'buscar'])->name('buscar.producto');
 Route::get('/producto/{id}', [ProductoController::class, 'verProducto'])->name('producto.producto');
+
+//ordenes
+Route::get('/orden/lista', [OrdenController::class, 'mostrar'])->name('orden.mostrar');
+Route::get('/orden/editar/{id}', [OrdenController::class, 'editar'])->name('orden.editar');
+Route::post('/orden/actualizar', [OrdenController::class, 'actualizar'])->name('orden.actualizar');
+Route::get('/orden/eliminar/{id}', [OrdenController::class, 'eliminar'])->name('orden.eliminar');
 
 //especialidad
 Route::get('/especialidad/nueva', function () {
@@ -105,10 +116,15 @@ Route::get('/horario/editar/{id}', [HorarioController::class, 'editar'])->name('
 Route::post('/horario/actualizar', [HorarioController::class, 'actualizar'])->name('horario.actualizar');
 Route::get('/horario/eliminar/{id}', [HorarioController::class, 'eliminar'])->name('horario.eliminar');
 
-//pagos (test?)
-Route::get('/pagar', [PagoController::class, 'pagar']);
-Route::get('/success', [PagoController::class, 'success'])->name('paypal.success');
-Route::get('/cancel', [PagoController::class, 'cancel'])->name('paypal.cancel');
+//carro
+Route::post('/carrito/agregar', [CarritoController::class, 'agregar'])->name('carrito.agregar');
+Route::get('/carrito', [CarritoController::class, 'index'])->name('carrito.index');
+Route::delete('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
+Route::delete('/carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carrito.vaciar');
+//pagos (para carro
+Route::post('/paypal/carrito', [PagoController::class, 'pagarCarrito'])->name('paypal.carrito');
+Route::get('/paypal/success', [PagoController::class, 'success'])->name('paypal.success');
+Route::get('/paypal/cancel', [PagoController::class, 'cancel'])->name('paypal.cancel');
 
 // LEONEL
 // RUTAS DE BARRA DE NEVEGACIÓN
@@ -143,9 +159,9 @@ Route::get('/producto', function () {
     return view('producto');
 })->name('producto');
 
-Route::get('/carrito', function () {
-    return view('carrito');
-})->name('carrito');
+// Route::get('/carrito', function () {
+//     return view('carrito');
+// })->name('carrito');
 
 // RUTA DE TIPOS EJERCICIOS
 //PECHO

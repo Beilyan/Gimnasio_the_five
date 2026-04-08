@@ -55,8 +55,12 @@
         </div>
 
         <div class="mt-4">
-            <a href=""><button class="btn btn-dark">Comprar</button></a>
-            <a href=""><button class="btn btn-warning">Agregar al carrito</button></a>
+            {{-- <a href=""><button class="btn btn-dark">Comprar</button></a> --}}
+            <form action="{{route('carrito.agregar')}}" method="POST">
+                @csrf
+                <input type="hidden" name="producto_id" value="{{$producto->id}}">
+                <button class="btn btn-warning">Agregar al carrito</button>
+            </form>
         </div>
 
     </div>

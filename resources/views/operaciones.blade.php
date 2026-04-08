@@ -58,6 +58,16 @@
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+                <h5 class="text-xl font-semibold mb-3">HORARIOS</h5>
+                <p class="text-gray-600 mb-4">
+                    En este apartado puedes hacer operaciones sobre horarios de entrenadores a traves de formularios.
+                </p>
+                <a href="{{route('horario.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                    Ver
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
                 <h5 class="text-xl font-semibold mb-3">PROVEEDORES</h5>
                 <p class="text-gray-600 mb-4">
                     En este apartado puedes hacer oparaciones sobre proveedores a traves de formularios.
@@ -88,14 +98,14 @@
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
-                <h5 class="text-xl font-semibold mb-3">HORARIOS</h5>
+                <h5 class="text-xl font-semibold mb-3">ORDENES</h5>
                 <p class="text-gray-600 mb-4">
-                    En este apartado puedes hacer operaciones sobre horarios de entrenadores a traves de formularios.
+                    En este apartado puedes visualizar y hacer operaciones sobre las ordenes a traves de formularios.
                 </p>
-                <a href="{{route('horario.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
+                <a href="{{route('orden.mostrar')}}" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition">
                     Ver
                 </a>
-            </div>
+            </div>            
 
         </div>
 
