@@ -17,11 +17,16 @@
         </a>
         <img src="{{ asset('storage/' . $producto->img_portada) }}" class="cover-img" alt="Portada">
         
-        <a href="{{ route('producto.mostrar') }}">
-        <button class="btn btn-light btn-sm edit-cover shadow">
-            <i class="bi bi-camera"></i> Editar portada
-        </button>
+        @auth
+        @if(auth()->user()->persona->rol == '2')
+        <a href="{{ route('producto.editar', $producto->id) }}">
+            <button class="btn btn-light btn-sm edit-cover shadow">
+                <i class="bi bi-camera"></i> Editar portada
+            </button>
         </a>
+        @endif
+        @endauth
+
     </div>
 
     {{-- INFORMACIÓN PERFIL --}}
@@ -35,7 +40,12 @@
                      class="rounded-circle profile-img shadow" 
                      alt="Perfil">
 
-                <a href="{{ route('producto.mostrar') }}"><button class="btn btn-light btn-sm change-photo shadow"><i class="bi bi-camera"></i></button></a>
+                @auth
+                @if(auth()->user()->persona->rol == '2')
+                    <a href="{{ route('producto.editar', $producto->id) }}"><button class="btn btn-light btn-sm change-photo shadow"><i class="bi bi-camera"></i></button>
+                    </a>
+                @endif
+                @endauth
             </div>
 
         {{-- NOMBRE Y BADGE --}}

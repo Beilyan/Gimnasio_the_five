@@ -11,6 +11,8 @@
 
 <body class="bg-gray-50">
 
+    @if(auth()->check() && @auth()->user()->persona->rol == '2')
+
     <div class="max-w-7xl mx-auto p-8">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -136,6 +138,8 @@
     </nav>
 
     <div class="bg-white" style="height: 150px"></div>
+
+    @endif
 
 </body>
 </html>

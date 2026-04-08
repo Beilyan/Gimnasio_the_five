@@ -17,7 +17,7 @@
         <a href="{{ route('operaciones') }}#cartas"
         class="text-gray-700 hover:text-black text-3xl transition">
             <i class="bi bi-box-arrow-in-left fs-1"></i>
-        </a>
+    </a>
 
         <h1 class="text-3xl font-semibold text-gray-800">
             Lista de Personas
@@ -43,6 +43,7 @@
                     <th class="p-3 text-left">Teléfono</th>
                     <th class="p-3 text-left">Correo</th>
                     <th class="p-3 text-left">Sexo</th>
+                    <th class="p-3 text-left">Rol</th>
                     <th class="p-3 text-left">Acciones</th>
                 </tr>
             </thead>
@@ -58,6 +59,7 @@
                     <td class="p-3">{{$fila->telefono}}</td>
                     <td class="p-3">{{$fila->correo}}</td>
                     <td class="p-3">{{$fila->sexo}}</td>
+                    <td class="p-3">{{$fila->rol}}</td>
 
                     <td class="p-3 flex gap-2">
                         <a href="{{route('persona.editar', $fila->id)}}"

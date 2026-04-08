@@ -128,4 +128,19 @@ class EntrenadorDetalleController extends Controller
 
         return view('entrenador', compact('detalle', 'listaHorarios'));
     }
+
+    public function buscar(Request $req) {
+
+    $query = $req->get('query');
+
+    $entrenadores = EntrenadorDetalle::with('empleado.persona')
+        ->whereHas('empleado.persona', function($q) use ($query) {
+            $q->where('nom_persona', 'LIKE', "%{$query}%")
+              ->orWhere('apaterno', 'LIKE', "%{$query}%");
+        })
+        ->limit(10)
+        ->get();
+
+    return response()->json($entrenadores);
+    }
 }

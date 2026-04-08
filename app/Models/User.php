@@ -54,4 +54,7 @@ class User extends Authenticatable
     return $this->hasOne(Carrito::class);
 }
 
+    function persona(){
+        return $this->hasOne(Persona::class);
+    }
 }

@@ -77,6 +77,7 @@ Route::get('/tienda', [ProductoController::class, 'mostrarUser'])->name('product
 Route::get('/producto/editar/{id}', [ProductoController::class, 'editar'])->name('producto.editar');
 Route::post('/producto/actualizar', [ProductoController::class, 'actualizar'])->name('producto.actualizar');
 Route::get('/producto/eliminar/{id}', [ProductoController::class, 'eliminar'])->name('producto.eliminar');
+Route::get('/producto/buscar', [ProductoController::class, 'buscar'])->name('buscar.producto');
 Route::get('/producto/{id}', [ProductoController::class, 'verProducto'])->name('producto.producto');
 
 //especialidad
@@ -97,6 +98,7 @@ Route::get('/lista_entrenadores', [EntrenadorDetalleController::class, 'mostrarU
 Route::get('/entrenador/editar/{id}', [EntrenadorDetalleController::class, 'editar'])->name('entrenador.editar');
 Route::post('/entrenador/actualizar', [EntrenadorDetalleController::class, 'actualizar'])->name('entrenador.actualizar');
 Route::get('/entrenador/eliminar/{id}', [EntrenadorDetalleController::class, 'eliminar'])->name('entrenador.eliminar');
+Route::get('/entrenador/buscar', [EntrenadorDetalleController::class, 'buscar'])->name('entrenador.buscar');
 Route::get('/entrenador/{id}', [EntrenadorDetalleController::class, 'verPerfil'])->name('entrenador.perfil');
 
 //horario
@@ -127,6 +129,11 @@ Route::get('/', function () {
 Route::get('inicio_sesion', function () {
     return view('inicio_sesion');
 })->name('inicio_sesion');
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect()->route('inicio');
+})->name('logout');
 
 Route::get('/perfil', function () {
     return view('perfil');
@@ -796,15 +803,15 @@ Route::get('/google-login', function(){
 Route::get('/google-callback', function(){
     $user = Socialite::driver('google')->user();
     
-    $buscarUsuario = User::where('api_id', $user->id)->where('tipo', 'google')->first();
+    $buscarUsuario = User::where('email', $user->email)->where('tipo', 'google')->first();
 
     if($buscarUsuario){
+        $buscarUsuario->avatar = $user->avatar;
+        $buscarUsuario->api_id = $user->id;
+        $buscarUsuario->save();
+        
         //Ya tengo a ese usuario de google registrado
         Auth::login($buscarUsuario);//Inicio sesión
-    }else{
-        //Ese usuario de google es nuevo, asi que lo registramos........
-        $nuevoUsuario = User::create(['name' => $user->name, 'email' => $user->email, 'tipo' => 'google', 'api_id' => $user->id, 'avatar' => $user->avatar]);
-        Auth::login($nuevoUsuario); //Inicio sesión
     }
     return redirect()->route('inicio');
 });

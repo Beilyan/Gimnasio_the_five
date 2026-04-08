@@ -9,6 +9,7 @@
 </head>
 <body>
 
+ @auth 
 {{-- INICIO DE FOTOS --}}
     <!-- PORTADA -->
     {{-- <div class="profile-cover shadow">
@@ -117,11 +118,13 @@
             <span>Tienda</span>
         </a>
 
+        @if(auth()->check() && @auth()->user()->persona->rol == '2')
         <a href="{{ route('operaciones') }}"
            class="nav-item text-center {{ request()->routeIs('operaciones') ? 'active' : '' }}">
             <i class="bi bi-bug"></i>
             <span>Operaciones</span>
         </a>
+        @endif
 
     </div>
 </nav>
@@ -130,5 +133,19 @@
 {{-- INICIO DE APARTADO EN BLANCO --}}
 <div class="bg-white mt-5" style="height: 100px"></div>  
 {{-- FIN DE APARTADO EN BLANCO --}}
+@endguest
+
+@guest
+<div class="container mt-4 ">
+    <div class="mt-2">
+        <a href="{{ route('inicio') }}#cartas">
+            <i class="bi bi-box-arrow-in-left fs-1"></i>
+        </a>
+    </div>
+</div>
+
+@include('inicio_sesion')
+
+@endguest
 </body>
 </html>
