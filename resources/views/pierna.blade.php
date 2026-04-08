@@ -31,10 +31,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_1') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_1.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Sentadilla sobre Bosu</h3>
+        <h3>Sentadilla sobre Bosu</h3><br>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('piernas_2') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_2.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla sumo (sin equipo)</h3>
@@ -53,7 +53,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_3') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_3.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla sumo en máquina Smith</h3>
@@ -64,7 +64,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_4') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_4.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla sumo con pesa rusa</h3>
@@ -75,7 +75,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_5') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_5.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla sumo con barra landmine</h3>
@@ -86,7 +86,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_6') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_6.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla split en máquina Smith</h3>
@@ -97,7 +97,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_7') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_7.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla split con mancuernas</h3>
@@ -108,7 +108,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_8') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_8.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla split con barra</h3>
@@ -119,7 +119,7 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_9') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_9.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla silla en máquina Smith</h3>
@@ -130,7 +130,7 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('piernas_10') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_10.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla lateral con mancuerna</h3>
@@ -141,7 +141,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_11') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_11.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Sentadilla en máquina péndulo</h3>
@@ -152,10 +152,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_12') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_12.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Sentadillas con salto</h3>
+        <h3>Sentadillas con salto</h3><br>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_13') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_13.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Farmer Carry con barra trampa</h3>
@@ -174,7 +174,7 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('piernas_14') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_14.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Extensión a una pierna en máquina</h3>
@@ -185,7 +185,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_15') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_15.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Estocada con mancuernas</h3>
@@ -196,7 +196,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_16') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_16.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Curl de pierna de pie en máquina</h3>
@@ -207,10 +207,10 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_17') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_17.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Curl a una pierna tumbado en máquina</h3>
+        <h3>Curl a una pierna tumbado en máquina</h3><br>
       </div>
     </div>
   </div>
@@ -218,10 +218,10 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('piernas_18') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_18.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press de pierna posición abierta</h3>
+        <h3>Press de pierna posición abierta</h3><br>
       </div>
     </div>
   </div>
@@ -229,10 +229,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_19') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_19.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Sentadilla Hack Squat</h3>
+        <h3>Sentadilla Hack Squat</h3><br>
       </div>
     </div>
   </div>
@@ -240,7 +240,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('piernas_20') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pierna_20.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Peso muerto con barra: Uno de los mejores ejercicios</h3>

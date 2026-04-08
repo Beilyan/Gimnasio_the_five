@@ -166,7 +166,7 @@
       <img src="{{ asset('img/tricep_13.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Rompecráneos con mancuernas</h3>
+        <h3>Rompecráneos con mancuernas</h3><br>
       </div>
     </div>
   </div>
@@ -210,7 +210,7 @@
       <img src="{{ asset('img/tricep_17.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Extensión de tríceps a una mano en polea (agarre cuerda)</h3>
+        <h3>Extensión de tríceps a una mano en polea (agarre cuerda)</h3><br>
       </div>
     </div>
   </div>
@@ -221,7 +221,7 @@
       <img src="{{ asset('img/tricep_18.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Extensión de tríceps a una mano con polea (agarre supino)</h3>
+        <h3>Extensión de tríceps a una mano con polea (agarre supino)</h3><br>
       </div>
     </div>
   </div>
@@ -243,7 +243,7 @@
       <img src="{{ asset('img/tricep_20.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Fondos en banco plano</h3>
+        <h3>Fondos en banco plano</h3><br><br>
       </div>
     </div>
   </div>

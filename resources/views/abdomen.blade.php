@@ -31,7 +31,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_1') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_1.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Rueda abdominal de rodillas</h3>
@@ -40,23 +40,23 @@
   </div>
 
   <div class="col-6">
-    <div class="card ">
-      <a href="{{ route('abdomen_2') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+    <div class="card">
+      <a href="{{ route('abdomen_9') }}">
+      <img src="{{ asset('img/abd_9.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Rueda abdominal de pie</h3>
+        <h3>Giro Ruso (sin equipo)</h3>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('abdomen_3') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <a href="{{ route('abdomen_20') }}">
+      <img src="{{ asset('img/abd_20.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Rotaciones de tronco en máquina</h3>
+        <h3>Crunch en polea alta</h3><br>
       </div>
     </div>
   </div>
@@ -64,10 +64,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_4') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_4.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Plancha lateral</h3>
+        <h3>Plancha lateral</h3><br>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_5') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_5.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Plancha de rodillas</h3>
@@ -86,7 +86,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_6') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_6.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Plancha a una pierna</h3>
@@ -97,7 +97,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_7') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_7.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Hollow Hold</h3>
@@ -108,7 +108,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_8') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_8.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Giro Ruso con mancuerna</h3>
@@ -117,53 +117,20 @@
   </div>
 
     <div class="col-6">
-    <div class="card">
-      <a href="{{ route('abdomen_9') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Giro Ruso (sin equipo)</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
     <div class="card ">
-      <a href="{{ route('abdomen_10') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <a href="{{ route('abdomen_2') }}">
+      <img src="{{ asset('img/abd_2.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Dead Bug</h3>
+        <h3>Rueda abdominal de pie</h3><br>
       </div>
     </div>
   </div>
 
   <div class="col-6">
-    <div class="card">
-      <a href="{{ route('abdomen_11') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Crunch sentado en máquina</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="card">
-      <a href="{{ route('abdomen_12') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
-      </a>
-      <div class="card-body text-center">
-        <h3>Abdominales sobre pelota de yoga</h3>
-      </div>
-    </div>
-  </div>
-
-    <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_13') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_13.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Crunch (brazos rectos por encima de la cabeza)</h3>
@@ -172,9 +139,42 @@
   </div>
 
   <div class="col-6">
+    <div class="card">
+      <a href="{{ route('abdomen_11') }}">
+      <img src="{{ asset('img/abd_11.png') }}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body text-center">
+        <h3>Crunch sentado en máquina</h3><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card">
+      <a href="{{ route('abdomen_12') }}">
+      <img src="{{ asset('img/abd_12.png') }}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body text-center">
+        <h3>Abdominales sobre pelota de yoga</h3><br>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-6">
+    <div class="card ">
+      <a href="{{ route('abdomen_10') }}">
+      <img src="{{ asset('img/abd_10.png') }}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body text-center">
+        <h3>Dead Bug</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
     <div class="card ">
       <a href="{{ route('abdomen_14') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_14.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Criss Cross Legs</h3>
@@ -185,7 +185,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_15') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_15.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Cocoons</h3>
@@ -196,7 +196,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_16') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_16.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Air Bike en el suelo</h3>
@@ -207,10 +207,10 @@
     <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_17') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_17.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Toque de talones</h3>
+        <br><br><br><br><br><h3>Toque de talones</h3><br><br><br><br><br><br><br>
       </div>
     </div>
   </div>
@@ -218,10 +218,10 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('abdomen_18') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_18.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>V-Up con mancuerna</h3>
+        <br><br><br><br><br><h3>V-Up con mancuerna</h3><br><br><br><br><br><br><br>
       </div>
     </div>
   </div>
@@ -229,21 +229,21 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('abdomen_19') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/abd_19.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Abdominales cruzados</h3>
+        <br><br><br><br><br><h3>Abdominales cruzados</h3><br><br><br><br><br><br>
       </div>
     </div>
   </div>
 
   <div class="col-6">
     <div class="card">
-      <a href="{{ route('abdomen_20') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <a href="{{ route('abdomen_3') }}">
+      <img src="{{ asset('img/abd_3.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Crunch en polea alta</h3>
+        <h3>Rotaciones de tronco en máquina</h3>
       </div>
     </div>
   </div>

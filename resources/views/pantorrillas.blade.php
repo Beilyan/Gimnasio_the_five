@@ -31,10 +31,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_1') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_1.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Levantamiento de pantorrillas en máquina Smith</h3>
+        <h3>Levantamiento de pantorrillas en máquina Smith</h3><br>
       </div>
     </div>
   </div>
@@ -42,10 +42,10 @@
   <div class="col-6">
     <div class="card ">
       <a href="{{ route('pantorrillas_2') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_2.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Elevación de pantorrillas con barra</h3>
+        <h3>Elevación de pantorrillas con barra</h3><br><br>
       </div>
     </div>
   </div>
@@ -53,10 +53,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_3') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_3.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Levantamiento de pantorrilla a una pierna (sin equipo)</h3>
+        <h3>Levantamiento de pantorrilla a una pierna (sin equipo)</h3><br>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_4') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_4.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Elevación de pantorrilla a una pierna con mancuernas</h3>
@@ -75,10 +75,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_5') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_5.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Press de pantorrillas</h3>
+        <h3>Press de pantorrillas</h3><br>
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_6') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_6.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Elevación de talones de pie en máquina</h3>
@@ -97,7 +97,7 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_7') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_7.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
         <h3>Elevación de talones sentado</h3>
@@ -108,10 +108,10 @@
   <div class="col-6">
     <div class="card">
       <a href="{{ route('pantorrillas_8') }}">
-      <img src="{{ asset('img/.webp') }}" class="card-img-top" alt="...">
+      <img src="{{ asset('img/pant_8.png') }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body text-center">
-        <h3>Donkey Calf Raises</h3>
+        <h3>Donkey Calf Raises</h3><br>
       </div>
     </div>
   </div>
