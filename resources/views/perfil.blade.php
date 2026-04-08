@@ -51,9 +51,13 @@
 
     </div>
 {{-- FIN DE FOTOS --}}
-
+<div class="container shadow-lg p-4 rounded bg-white mt-3 col-2" style="margin-left: 1010px;"> 
+    <a href="{{ route('membresia.ver') }}" class="btn btn-success w-100">
+        Ver membresías disponibles
+    </a>
+</div>
 {{-- INICIO DE CONTENEDOR DE INFORMACION --}}
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8">
+<div class="container shadow-lg p-4 rounded bg-white mt-3 col-8">
     <h1 class="fw-bold mb-2">Información de membresía</h1>
     <div class="row g-3">
         <div class="col-md-6">
@@ -84,15 +88,6 @@
         <h1 class="text-center text-white">{{$membresia ? $membresia->duracion_meses . ' Meses' : 'Sin membresía'}}</h1>
     </div>
     
-</div>
-<div class="container shadow-lg p-4 rounded bg-white mt-5 col-8"> 
-    <a href="{{route('membresia.ver')}}">
-    <div class=" container mt-2  p-2 rounded-3 bg-dark">
-        <span class="text-white text-center">
-            Ver membresías disponibles
-        </span>
-    </div>
-    </a>
 </div>
 {{-- FIN DE CONTENEDOR DE INFORMACION --}}
 

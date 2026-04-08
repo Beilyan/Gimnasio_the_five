@@ -31,30 +31,4 @@ class OrdenController extends Controller
         return view('lista_orden', compact('ordenes'));
     }
 
-    function editar($id){
-        $ordenes = Orden::findOrFail($id);
-
-        $entrenadores = EntrenadorDetalle::with('empleado.persona')->get();
-
-        return view('editar_horario', compact('horario', 'entrenadores'));
-    }
-
-    function actualizar(Request $req){
-        $Orden = Orden::findOrFail($req->id);
-        $horario->entrenador_id = $req->entrenador_id;
-        $horario->dia = $req->dia;
-        $horario->hora_inicio = $req->hora_inicio;
-        $horario->hora_fin = $req->hora_fin;
-
-        $horario->save();
-        return redirect()->route('horario.mostrar');
-    }
-
-    function eliminar($id){
-        $ordenes = Orden::findOrFail($id);
-        $ordenes -> delete();
-
-        return redirect()->route('orden.mostrar');
-    }
-
 }

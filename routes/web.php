@@ -83,9 +83,6 @@ Route::get('/producto/{id}', [ProductoController::class, 'verProducto'])->name('
 
 //ordenes
 Route::get('/orden/lista', [OrdenController::class, 'mostrar'])->name('orden.mostrar');
-Route::get('/orden/editar/{id}', [OrdenController::class, 'editar'])->name('orden.editar');
-Route::post('/orden/actualizar', [OrdenController::class, 'actualizar'])->name('orden.actualizar');
-Route::get('/orden/eliminar/{id}', [OrdenController::class, 'eliminar'])->name('orden.eliminar');
 
 //especialidad
 Route::get('/especialidad/nueva', function () {

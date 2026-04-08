@@ -59,17 +59,11 @@
                     <td class="p-3">{{$fila->estado}}</td>
                     
                     <td class="p-3 flex gap-2">
-
-                        {{-- <a href="{{route('horario.editar', $fila->horario_id)}}"
-                        class="bg-gray-700 text-white px-3 py-1 rounded-md hover:bg-black hover:scale-105 transition duration-200 shadow">
-                            Editar
-                        </a>
-
-                        <a href="{{route('horario.eliminar', $fila->horario_id)}}"
-                        class="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-800 hover:scale-105 transition duration-200 shadow">
-                            Eliminar
-                        </a> --}}
-
+                            <button onclick="cambiarEstado(this)"data-estado="{{ $fila->estado }}"
+                                class="px-3 py-1 rounded-md text-white font-semibold transition duration-200
+                                {{ $fila->estado == 'entregado' ? 'bg-green-500' : 'bg-yellow-500' }}">
+                                {{ $fila->estado == 'entregado' ? 'Entregado' : 'Pendiente' }}
+                            </button>
                     </td>
 
                 </tr>
@@ -81,6 +75,27 @@
     </div>
 
 </div>
+
+<script>
+function cambiarEstado(btn) {
+    let estado = btn.getAttribute("data-estado");
+
+    if (estado === "pendiente") {
+        btn.setAttribute("data-estado", "entregado");
+        btn.textContent = "Entregado";
+
+        btn.classList.remove("bg-yellow-500");
+        btn.classList.add("bg-green-500");
+
+    } else {
+        btn.setAttribute("data-estado", "pendiente");
+        btn.textContent = "Pendiente";
+
+        btn.classList.remove("bg-green-500");
+        btn.classList.add("bg-yellow-500");
+    }
+}
+</script>
 
 </body>
 </html>
