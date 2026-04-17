@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('otro')->nullable();
             $table->text('descripcion')->nullable();
             $table->timestamps();
-            $table->foreign('empleado_id')->references('id')->on('empleados');
+            $table->foreign('empleado_id')->references('id')->on('empleados')->onDelete('cascade'); 
         });
     }
 
