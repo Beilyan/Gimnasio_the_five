@@ -80,9 +80,6 @@
             </div>
         </div>
     </div>
-    {{-- <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%">25%</div>
-</div> --}}
     <div class=" container mt-4  p-4 rounded-3 bg-dark">
         <h6 class="text-center text-white">Duración total</h6>
         <h1 class="text-center text-white">{{$membresia ? $membresia->duracion_meses . ' Meses' : 'Sin membresía'}}</h1>

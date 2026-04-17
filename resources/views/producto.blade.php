@@ -9,6 +9,33 @@
 </head>
 <body>
 
+{{-- MENSAJE DE ÉXITO --}}
+@if(session('success'))
+    <div id="alerta-success" style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #28a745;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 9999;
+        font-weight: bold;
+    ">
+        {{ session('success') }}
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const alerta = document.getElementById('alerta-success');
+            if(alerta){
+                alerta.remove();
+            }
+        }, 3000);
+    </script>
+@endif
+
 {{-- INICIO DE FOTOS --}}
     {{-- PORTADA --}}
     <div class="profile-cover shadow">
@@ -42,20 +69,22 @@
 
                 @auth
                 @if(auth()->user()->persona->rol == '2')
-                    <a href="{{ route('producto.editar', $producto->id) }}"><button class="btn btn-light btn-sm change-photo shadow"><i class="bi bi-camera"></i></button>
+                    <a href="{{ route('producto.editar', $producto->id) }}">
+                        <button class="btn btn-light btn-sm change-photo shadow">
+                            <i class="bi bi-camera"></i>
+                        </button>
                     </a>
                 @endif
                 @endauth
             </div>
 
-        {{-- NOMBRE Y BADGE --}}
+        {{-- NOMBRE --}}
             <div class="ms-4 mt-3 mt-md-0">
                 <h2 class="fw-bold mb-2">{{ $producto->nom_producto }}</h2>
             </div>
         </div>
 
         <div class="mt-4">
-            {{-- <a href=""><button class="btn btn-dark">Comprar</button></a> --}}
             <form action="{{route('carrito.agregar')}}" method="POST">
                 @csrf
                 <input type="hidden" name="producto_id" value="{{$producto->id}}">
@@ -88,5 +117,6 @@
 {{-- INICIO DE APARTADO EN BLANCO --}}
 <div class="bg-white mt-5" style="height: 10px"></div>  
 {{-- FIN DE APARTADO EN BLANCO --}}
+
 </body>
 </html>
