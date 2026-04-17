@@ -10,17 +10,23 @@
 </head>
 <body>
 
-    <div class="bg-gray-50 min-h-screen p-4 md:p-10 font-sans">
+<div class="bg-gray-50 min-h-screen p-4 md:p-10 font-sans">
     <div class="max-w-6xl mx-auto">
+
+     
         <div class="flex justify-between items-center mb-8">
             <div class="flex items-center gap-4">
-                <a href="{{ url()->previous() }}" class="text-gray-600 hover:text-black transition">
+                <a href="{{ route('producto.user') }}" class="text-gray-600 hover:text-black transition">
                     <i class="bi bi-arrow-left text-2xl"></i>
                 </a>
                 <div>
                     <h1 class="text-2xl font-bold text-gray-800">Carrito de Compra</h1>
-                    <p class="text-sm text-gray-500">{{ isset($carrito) ? $carrito->items->count() : 0 }} productos</p>
+                    <p class="text-sm text-gray-500">
+                        {{ isset($carrito) ? $carrito->items->count() : 0 }} productos
+                    </p>
                 </div>
+            </div>
+
             <form action="{{route('carrito.vaciar')}}" method="POST">
                 @csrf
                 @method('DELETE')
@@ -30,70 +36,72 @@
             </form>
         </div>
 
+        
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          
             <div class="lg:col-span-2 space-y-4">
-                
-                <div class="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6 relative">
-                    @php $total = 0; @endphp
+                @php $total = 0; @endphp
 
-@if($carrito && $carrito->items->count())
-    @foreach($carrito->items as $item)
-        @php 
-            $subtotal = $item->cantidad * $item->precio; 
-            $total += $subtotal;
-        @endphp
+                @if($carrito && $carrito->items->count())
+                    @foreach($carrito->items as $item)
+                        @php 
+                            $subtotal = $item->cantidad * $item->precio; 
+                            $total += $subtotal;
+                        @endphp
 
-        <div class="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6 relative">
-            
-            <img src="{{ asset('storage/'.$item->producto->img_perfil) }}" class="w-28 h-28 rounded-2xl object-cover shadow-inner">
-            
-            <div class="flex-1">
-                <h3 class="font-bold text-xl text-gray-800">
-                    {{ $item->producto->nom_producto }}
-                </h3>
+                        <div class="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6 relative">
+                            
+                            <img src="{{ asset('storage/'.$item->producto->img_perfil) }}" 
+                                 class="w-28 h-28 rounded-2xl object-cover shadow-inner">
 
-                <div class="inline-flex items-center bg-gray-100 rounded-xl p-1 border border-gray-200">
-                    <span class="px-5 font-bold text-gray-800">
-                        {{ $item->cantidad }}
-                    </span>
-                </div>
-            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-xl text-gray-800">
+                                    {{ $item->producto->nom_producto }}
+                                </h3>
 
-            <div class="flex flex-col items-end justify-between h-full self-stretch">
-                <form action="{{ route('carrito.eliminar', $item->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button class="text-red-400 hover:text-red-600 transition text-lg">
-                        <i class="bi bi-trash3"></i>
-                    </button>
-                </form>
+                                <div class="inline-flex items-center bg-gray-100 rounded-xl p-1 border border-gray-200">
+                                    <span class="px-5 font-bold text-gray-800">
+                                        {{ $item->cantidad }}
+                                    </span>
+                                </div>
+                            </div>
 
-                <div class="text-right">
-                    <p class="text-2xl font-black text-gray-900">
-                        ${{ number_format($subtotal, 2) }}
-                    </p>
-                    <p class="text-xs text-gray-400 font-medium">
-                        ${{ number_format($item->precio, 2) }} c/u
-                    </p>
-                </div>
-            </div>
-        </div>
-    @endforeach
-@else
-    <p class="text-gray-500">Tu carrito está vacío</p>
-@endif
-                </div>
-                
+                            <div class="flex flex-col items-end justify-between h-full self-stretch">
+                                <form action="{{ route('carrito.eliminar', $item->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="text-red-400 hover:text-red-600 transition text-lg">
+                                        <i class="bi bi-trash3"></i>
+                                    </button>
+                                </form>
+
+                                <div class="text-right">
+                                    <p class="text-2xl font-black text-gray-900">
+                                        ${{ number_format($subtotal, 2) }}
+                                    </p>
+                                    <p class="text-xs text-gray-400 font-medium">
+                                        ${{ number_format($item->precio, 2) }} c/u
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <p class="text-gray-500">Tu carrito está vacío</p>
+                @endif
             </div>
 
             <div class="lg:col-span-1">
                 <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-50 sticky top-10">
                     <h2 class="text-xl font-bold text-gray-800 mb-8">Resumen de Compra</h2>
-                    
+
                     <div class="space-y-5 mb-8">
                         <div class="border-t border-dashed border-gray-200 pt-5 flex justify-between items-center">
                             <span class="text-xl font-bold text-gray-800">Total</span>
-                            <span class="text-3xl font-black text-gray-900">${{number_format($total ?? 0, 2)}}</span>
+                            <span class="text-3xl font-black text-gray-900">
+                                ${{ number_format($total ?? 0, 2) }}
+                            </span>
                         </div>
                     </div>
 
@@ -114,6 +122,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
